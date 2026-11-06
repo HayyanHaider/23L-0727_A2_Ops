@@ -28,6 +28,8 @@ from visionguard.training import dataset, seed_everything, transfer
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "outputs/23L-0727_A2_Ops/colab/training_cached"
+if not SOURCE.exists():
+    SOURCE = ROOT / "submission/evidence/colab/training_cached"
 OUT = ROOT / "outputs/full_assignment"
 
 

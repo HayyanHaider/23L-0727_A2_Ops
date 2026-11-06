@@ -18,3 +18,5 @@ __pycache__
 *.zip
 *.pdf
 *.sqlite3
+
+node_modules/

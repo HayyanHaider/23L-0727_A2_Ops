@@ -1,0 +1,312 @@
+test (3.11)	Set up job	﻿2026-11-06T21:42:28.9642035Z Current runner version: '2.338.2'
+test (3.11)	Set up job	2026-11-06T21:42:28.9663369Z ##[group]Runner Image Provisioner
+test (3.11)	Set up job	2026-11-06T21:42:28.9664131Z Hosted Compute Agent
+test (3.11)	Set up job	2026-11-06T21:42:28.9664615Z Version: 20261028.624
+test (3.11)	Set up job	2026-11-06T21:42:28.9665113Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+test (3.11)	Set up job	2026-11-06T21:42:28.9665859Z Build Date: 2026-10-28T21:51:42Z
+test (3.11)	Set up job	2026-11-06T21:42:28.9666469Z Worker ID: {2098bd4a-57b6-4926-a37a-bf9a4efa6439}
+test (3.11)	Set up job	2026-11-06T21:42:28.9667083Z Region: westus2
+test (3.11)	Set up job	2026-11-06T21:42:28.9667544Z Cloud: Azure
+test (3.11)	Set up job	2026-11-06T21:42:28.9667976Z ##[endgroup]
+test (3.11)	Set up job	2026-11-06T21:42:28.9669327Z ##[group]Operating System
+test (3.11)	Set up job	2026-11-06T21:42:28.9669987Z Ubuntu
+test (3.11)	Set up job	2026-11-06T21:42:28.9670473Z 26.04.1
+test (3.11)	Set up job	2026-11-06T21:42:28.9670922Z LTS
+test (3.11)	Set up job	2026-11-06T21:42:28.9671360Z ##[endgroup]
+test (3.11)	Set up job	2026-11-06T21:42:28.9671925Z ##[group]Runner Image
+test (3.11)	Set up job	2026-11-06T21:42:28.9672432Z Image: ubuntu-26.04
+test (3.11)	Set up job	2026-11-06T21:42:28.9672930Z Version: 20261101.186.1
+test (3.11)	Set up job	2026-11-06T21:42:28.9673811Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261101.186/images/ubuntu/Ubuntu2604-Readme.md
+test (3.11)	Set up job	2026-11-06T21:42:28.9675318Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261101.186
+test (3.11)	Set up job	2026-11-06T21:42:28.9676112Z ##[endgroup]
+test (3.11)	Set up job	2026-11-06T21:42:28.9677041Z ##[group]GITHUB_TOKEN Permissions
+test (3.11)	Set up job	2026-11-06T21:42:28.9678760Z Contents: read
+test (3.11)	Set up job	2026-11-06T21:42:28.9679790Z Metadata: read
+test (3.11)	Set up job	2026-11-06T21:42:28.9680472Z ##[endgroup]
+test (3.11)	Set up job	2026-11-06T21:42:28.9682209Z Secret source: Actions
+test (3.11)	Set up job	2026-11-06T21:42:28.9683055Z Cache mode: write
+test (3.11)	Set up job	2026-11-06T21:42:28.9683654Z Prepare workflow directory
+test (3.11)	Set up job	2026-11-06T21:42:28.9953018Z Prepare all required actions
+test (3.11)	Set up job	2026-11-06T21:42:28.9993109Z Getting action download info
+test (3.11)	Set up job	2026-11-06T21:42:29.3080787Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+test (3.11)	Set up job	2026-11-06T21:42:29.4509919Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+test (3.11)	Set up job	2026-11-06T21:42:29.6166768Z Complete job name: test (3.11)
+test (3.11)	Run actions/checkout@v4	﻿2026-11-06T21:42:29.6853119Z ##[group]Run actions/checkout@v4
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6853900Z with:
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6854314Z   repository: HayyanHaider/23L-0727_A2_Ops-ci-toy
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6857648Z   token: ***
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6858017Z   ssh-strict: true
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6858378Z   ssh-user: git
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6858741Z   persist-credentials: true
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6859140Z   clean: true
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6859500Z   sparse-checkout-cone-mode: true
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6860130Z   fetch-depth: 1
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6860494Z   fetch-tags: false
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6860857Z   show-progress: true
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6861235Z   lfs: false
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6861598Z   submodules: false
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6861963Z   set-safe-directory: true
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6862368Z   allow-unsafe-pr-checkout: false
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:29.6862967Z ##[endgroup]
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0508554Z Syncing repository: HayyanHaider/23L-0727_A2_Ops-ci-toy
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0510620Z ##[group]Getting Git version info
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0511673Z Working directory is '/home/runner/work/23L-0727_A2_Ops-ci-toy/23L-0727_A2_Ops-ci-toy'
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0513348Z [command]/usr/bin/git version
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0540647Z git version 2.56.0
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0563686Z ##[endgroup]
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0578093Z Temporarily overriding HOME='/home/runner/work/_temp/05f3d004-2781-4db5-800b-00f602e5690e' before making global git config changes
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0580606Z Adding repository directory to the temporary git global config as a safe directory
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0583634Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/23L-0727_A2_Ops-ci-toy/23L-0727_A2_Ops-ci-toy
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0676192Z Deleting the contents of '/home/runner/work/23L-0727_A2_Ops-ci-toy/23L-0727_A2_Ops-ci-toy'
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0680013Z ##[group]Initializing the repository
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0685053Z [command]/usr/bin/git init /home/runner/work/23L-0727_A2_Ops-ci-toy/23L-0727_A2_Ops-ci-toy
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0804690Z hint: Using 'master' as the name for the initial branch. This default branch name
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0806984Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0808502Z hint: to use in all of your new repositories, which will suppress this warning,
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0809814Z hint: call:
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0810274Z hint:
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0810762Z hint: 	git config --global init.defaultBranch <name>
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0811314Z hint:
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0811885Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0812825Z hint: 'development'. The just-created branch can be renamed via this command:
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0813631Z hint:
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0814021Z hint: 	git branch -m <name>
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0814475Z hint:
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0815132Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0819250Z Initialized empty Git repository in /home/runner/work/23L-0727_A2_Ops-ci-toy/23L-0727_A2_Ops-ci-toy/.git/
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0833595Z [command]/usr/bin/git remote add origin https://github.com/HayyanHaider/23L-0727_A2_Ops-ci-toy
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0879976Z ##[endgroup]
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0881140Z ##[group]Disabling automatic garbage collection
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0883214Z [command]/usr/bin/git config --local gc.auto 0
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0918665Z ##[endgroup]
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0920199Z ##[group]Setting up auth
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0924295Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.0959363Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.1379308Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.1413449Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.1662784Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.1692998Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.1937322Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.1975356Z ##[endgroup]
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.1976122Z ##[group]Fetching the repository
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.1983448Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e014f3aad5229f22e5365c241d2fe4b937d7b287:refs/remotes/origin/main
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6049016Z From https://github.com/HayyanHaider/23L-0727_A2_Ops-ci-toy
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6050639Z  * [new ref]         e014f3aad5229f22e5365c241d2fe4b937d7b287 -> origin/main
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6053308Z ##[endgroup]
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6054467Z ##[group]Determining the checkout info
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6055732Z ##[endgroup]
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6060451Z [command]/usr/bin/git sparse-checkout disable
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6109858Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6137985Z ##[group]Checking out the ref
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6142553Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6199306Z Switched to a new branch 'main'
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6202179Z branch 'main' set up to track 'origin/main'.
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6207880Z ##[endgroup]
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6250575Z [command]/usr/bin/git log -1 --format=%H
+test (3.11)	Run actions/checkout@v4	2026-11-06T21:42:30.6272171Z e014f3aad5229f22e5365c241d2fe4b937d7b287
+test (3.11)	Run actions/setup-python@v5	﻿2026-11-06T21:42:30.6595455Z ##[group]Run actions/setup-python@v5
+test (3.11)	Run actions/setup-python@v5	2026-11-06T21:42:30.6596024Z with:
+test (3.11)	Run actions/setup-python@v5	2026-11-06T21:42:30.6596416Z   python-version: 3.11
+test (3.11)	Run actions/setup-python@v5	2026-11-06T21:42:30.6596843Z   check-latest: false
+test (3.11)	Run actions/setup-python@v5	2026-11-06T21:42:30.6600430Z   token: ***
+test (3.11)	Run actions/setup-python@v5	2026-11-06T21:42:30.6601038Z   update-environment: true
+test (3.11)	Run actions/setup-python@v5	2026-11-06T21:42:30.6601486Z   allow-prereleases: false
+test (3.11)	Run actions/setup-python@v5	2026-11-06T21:42:30.6601905Z   freethreaded: false
+test (3.11)	Run actions/setup-python@v5	2026-11-06T21:42:30.6602308Z ##[endgroup]
+test (3.11)	Run actions/setup-python@v5	2026-11-06T21:42:30.7810390Z ##[group]Installed versions
+test (3.11)	Run actions/setup-python@v5	2026-11-06T21:42:30.7958665Z (node:2184) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test (3.11)	Run actions/setup-python@v5	2026-11-06T21:42:30.7960324Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test (3.11)	Run actions/setup-python@v5	2026-11-06T21:42:30.7961315Z Successfully set up CPython (3.11.18)
+test (3.11)	Run actions/setup-python@v5	2026-11-06T21:42:30.7962092Z ##[endgroup]
+test (3.11)	Run python -m unittest -v	﻿2026-11-06T21:42:30.8131927Z ##[group]Run python -m unittest -v
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:30.8132737Z ^[[36;1mpython -m unittest -v^[[0m
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:30.8223275Z shell: /usr/bin/bash -e {0}
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:30.8224222Z env:
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:30.8225010Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:30.8226586Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:30.8228194Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:30.8229570Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:30.8231036Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:30.8232400Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:30.8233506Z ##[endgroup]
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:31.4600483Z test_addition (test_calc.AddTests.test_addition) ... ok
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:31.4601447Z 
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:31.4601935Z ----------------------------------------------------------------------
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:31.4603105Z Ran 1 test in 0.000s
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:31.4603596Z 
+test (3.11)	Run python -m unittest -v	2026-11-06T21:42:31.4603951Z OK
+test (3.11)	Post Run actions/setup-python@v5	﻿2026-11-06T21:42:31.4845806Z Post job cleanup.
+test (3.11)	Post Run actions/setup-python@v5	2026-11-06T21:42:31.5907153Z (node:2194) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test (3.11)	Post Run actions/setup-python@v5	2026-11-06T21:42:31.5910197Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test (3.11)	Post Run actions/checkout@v4	﻿2026-11-06T21:42:31.6211331Z Post job cleanup.
+test (3.11)	Post Run actions/checkout@v4	2026-11-06T21:42:31.6923331Z [command]/usr/bin/git version
+test (3.11)	Post Run actions/checkout@v4	2026-11-06T21:42:31.6958022Z git version 2.56.0
+test (3.11)	Post Run actions/checkout@v4	2026-11-06T21:42:31.6989564Z Temporarily overriding HOME='/home/runner/work/_temp/a74eb70a-ddc7-472c-90cd-00a6417be6d1' before making global git config changes
+test (3.11)	Post Run actions/checkout@v4	2026-11-06T21:42:31.6993386Z Adding repository directory to the temporary git global config as a safe directory
+test (3.11)	Post Run actions/checkout@v4	2026-11-06T21:42:31.6996787Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/23L-0727_A2_Ops-ci-toy/23L-0727_A2_Ops-ci-toy
+test (3.11)	Post Run actions/checkout@v4	2026-11-06T21:42:31.7037662Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test (3.11)	Post Run actions/checkout@v4	2026-11-06T21:42:31.7071278Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test (3.11)	Post Run actions/checkout@v4	2026-11-06T21:42:31.7343207Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test (3.11)	Post Run actions/checkout@v4	2026-11-06T21:42:31.7370032Z http.https://github.com/.extraheader
+test (3.11)	Post Run actions/checkout@v4	2026-11-06T21:42:31.7384317Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+test (3.11)	Post Run actions/checkout@v4	2026-11-06T21:42:31.7426196Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test (3.11)	Post Run actions/checkout@v4	2026-11-06T21:42:31.7715088Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test (3.11)	Post Run actions/checkout@v4	2026-11-06T21:42:31.7747017Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test (3.11)	Complete job	﻿2026-11-06T21:42:31.8188269Z Cleaning up orphan processes
+test (3.11)	Complete job	2026-11-06T21:42:31.8592000Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+test (3.12)	Set up job	﻿2026-11-06T21:42:29.0465695Z Current runner version: '2.338.2'
+test (3.12)	Set up job	2026-11-06T21:42:29.0487303Z ##[group]Runner Image Provisioner
+test (3.12)	Set up job	2026-11-06T21:42:29.0487985Z Hosted Compute Agent
+test (3.12)	Set up job	2026-11-06T21:42:29.0488577Z Version: 20261028.624
+test (3.12)	Set up job	2026-11-06T21:42:29.0489127Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+test (3.12)	Set up job	2026-11-06T21:42:29.0489752Z Build Date: 2026-10-28T21:51:42Z
+test (3.12)	Set up job	2026-11-06T21:42:29.0490312Z Worker ID: {a86b8eee-ae8e-405f-9b11-2d12edb8a63b}
+test (3.12)	Set up job	2026-11-06T21:42:29.0490911Z Region: eastus2
+test (3.12)	Set up job	2026-11-06T21:42:29.0491414Z Cloud: Azure
+test (3.12)	Set up job	2026-11-06T21:42:29.0492277Z ##[endgroup]
+test (3.12)	Set up job	2026-11-06T21:42:29.0493776Z ##[group]Operating System
+test (3.12)	Set up job	2026-11-06T21:42:29.0495270Z Ubuntu
+test (3.12)	Set up job	2026-11-06T21:42:29.0495913Z 26.04.1
+test (3.12)	Set up job	2026-11-06T21:42:29.0496566Z LTS
+test (3.12)	Set up job	2026-11-06T21:42:29.0497187Z ##[endgroup]
+test (3.12)	Set up job	2026-11-06T21:42:29.0497843Z ##[group]Runner Image
+test (3.12)	Set up job	2026-11-06T21:42:29.0498543Z Image: ubuntu-26.04
+test (3.12)	Set up job	2026-11-06T21:42:29.0499104Z Version: 20261101.186.1
+test (3.12)	Set up job	2026-11-06T21:42:29.0500020Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261101.186/images/ubuntu/Ubuntu2604-Readme.md
+test (3.12)	Set up job	2026-11-06T21:42:29.0501460Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261101.186
+test (3.12)	Set up job	2026-11-06T21:42:29.0502495Z ##[endgroup]
+test (3.12)	Set up job	2026-11-06T21:42:29.0503763Z ##[group]GITHUB_TOKEN Permissions
+test (3.12)	Set up job	2026-11-06T21:42:29.0505587Z Contents: read
+test (3.12)	Set up job	2026-11-06T21:42:29.0506093Z Metadata: read
+test (3.12)	Set up job	2026-11-06T21:42:29.0506617Z ##[endgroup]
+test (3.12)	Set up job	2026-11-06T21:42:29.0508643Z Secret source: Actions
+test (3.12)	Set up job	2026-11-06T21:42:29.0509501Z Cache mode: write
+test (3.12)	Set up job	2026-11-06T21:42:29.0510073Z Prepare workflow directory
+test (3.12)	Set up job	2026-11-06T21:42:29.1483516Z Prepare all required actions
+test (3.12)	Set up job	2026-11-06T21:42:29.1522058Z Getting action download info
+test (3.12)	Set up job	2026-11-06T21:42:29.2915345Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+test (3.12)	Set up job	2026-11-06T21:42:29.9270986Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+test (3.12)	Set up job	2026-11-06T21:42:30.5890954Z Complete job name: test (3.12)
+test (3.12)	Run actions/checkout@v4	﻿2026-11-06T21:42:30.6554215Z ##[group]Run actions/checkout@v4
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6554937Z with:
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6555312Z   repository: HayyanHaider/23L-0727_A2_Ops-ci-toy
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6557697Z   token: ***
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6557930Z   ssh-strict: true
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6558156Z   ssh-user: git
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6558387Z   persist-credentials: true
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6558640Z   clean: true
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6558870Z   sparse-checkout-cone-mode: true
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6559128Z   fetch-depth: 1
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6559348Z   fetch-tags: false
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6559590Z   show-progress: true
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6559812Z   lfs: false
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6560036Z   submodules: false
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6560260Z   set-safe-directory: true
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6560520Z   allow-unsafe-pr-checkout: false
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:30.6561030Z ##[endgroup]
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.6024632Z Syncing repository: HayyanHaider/23L-0727_A2_Ops-ci-toy
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.6026234Z ##[group]Getting Git version info
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.6026814Z Working directory is '/home/runner/work/23L-0727_A2_Ops-ci-toy/23L-0727_A2_Ops-ci-toy'
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.6027728Z [command]/usr/bin/git version
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.6112899Z git version 2.56.0
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.6131569Z ##[endgroup]
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.6157643Z Temporarily overriding HOME='/home/runner/work/_temp/c1c45633-4d4b-4e0b-84fe-a928bc22f958' before making global git config changes
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.6158317Z Adding repository directory to the temporary git global config as a safe directory
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.6165018Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/23L-0727_A2_Ops-ci-toy/23L-0727_A2_Ops-ci-toy
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7625812Z Deleting the contents of '/home/runner/work/23L-0727_A2_Ops-ci-toy/23L-0727_A2_Ops-ci-toy'
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7629244Z ##[group]Initializing the repository
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7634150Z [command]/usr/bin/git init /home/runner/work/23L-0727_A2_Ops-ci-toy/23L-0727_A2_Ops-ci-toy
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7717270Z hint: Using 'master' as the name for the initial branch. This default branch name
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7718031Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7718445Z hint: to use in all of your new repositories, which will suppress this warning,
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7718773Z hint: call:
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7718935Z hint:
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7719263Z hint: 	git config --global init.defaultBranch <name>
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7719529Z hint:
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7719779Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7720183Z hint: 'development'. The just-created branch can be renamed via this command:
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7720486Z hint:
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7720653Z hint: 	git branch -m <name>
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7720841Z hint:
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7721103Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7734069Z Initialized empty Git repository in /home/runner/work/23L-0727_A2_Ops-ci-toy/23L-0727_A2_Ops-ci-toy/.git/
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7742850Z [command]/usr/bin/git remote add origin https://github.com/HayyanHaider/23L-0727_A2_Ops-ci-toy
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7784425Z ##[endgroup]
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7784862Z ##[group]Disabling automatic garbage collection
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7787406Z [command]/usr/bin/git config --local gc.auto 0
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7817351Z ##[endgroup]
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7817852Z ##[group]Setting up auth
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7823577Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:31.7851491Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.1040549Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.1069182Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.1310348Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.1340816Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.1577199Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.1612494Z ##[endgroup]
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.1612993Z ##[group]Fetching the repository
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.1620020Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e014f3aad5229f22e5365c241d2fe4b937d7b287:refs/remotes/origin/main
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8090932Z From https://github.com/HayyanHaider/23L-0727_A2_Ops-ci-toy
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8091613Z  * [new ref]         e014f3aad5229f22e5365c241d2fe4b937d7b287 -> origin/main
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8097801Z ##[endgroup]
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8098264Z ##[group]Determining the checkout info
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8098727Z ##[endgroup]
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8104212Z [command]/usr/bin/git sparse-checkout disable
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8173014Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8336798Z ##[group]Checking out the ref
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8342491Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8399667Z Switched to a new branch 'main'
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8404558Z branch 'main' set up to track 'origin/main'.
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8410952Z ##[endgroup]
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8448695Z [command]/usr/bin/git log -1 --format=%H
+test (3.12)	Run actions/checkout@v4	2026-11-06T21:42:32.8470807Z e014f3aad5229f22e5365c241d2fe4b937d7b287
+test (3.12)	Run actions/setup-python@v5	﻿2026-11-06T21:42:32.8726504Z ##[group]Run actions/setup-python@v5
+test (3.12)	Run actions/setup-python@v5	2026-11-06T21:42:32.8726760Z with:
+test (3.12)	Run actions/setup-python@v5	2026-11-06T21:42:32.8726928Z   python-version: 3.12
+test (3.12)	Run actions/setup-python@v5	2026-11-06T21:42:32.8727131Z   check-latest: false
+test (3.12)	Run actions/setup-python@v5	2026-11-06T21:42:32.8729045Z   token: ***
+test (3.12)	Run actions/setup-python@v5	2026-11-06T21:42:32.8729403Z   update-environment: true
+test (3.12)	Run actions/setup-python@v5	2026-11-06T21:42:32.8729618Z   allow-prereleases: false
+test (3.12)	Run actions/setup-python@v5	2026-11-06T21:42:32.8729845Z   freethreaded: false
+test (3.12)	Run actions/setup-python@v5	2026-11-06T21:42:32.8730061Z ##[endgroup]
+test (3.12)	Run actions/setup-python@v5	2026-11-06T21:42:32.9851064Z ##[group]Installed versions
+test (3.12)	Run actions/setup-python@v5	2026-11-06T21:42:33.0084961Z (node:2183) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test (3.12)	Run actions/setup-python@v5	2026-11-06T21:42:33.0085865Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test (3.12)	Run actions/setup-python@v5	2026-11-06T21:42:33.0086310Z Successfully set up CPython (3.12.16)
+test (3.12)	Run actions/setup-python@v5	2026-11-06T21:42:33.0086851Z ##[endgroup]
+test (3.12)	Run python -m unittest -v	﻿2026-11-06T21:42:33.0266937Z ##[group]Run python -m unittest -v
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.0267457Z ^[[36;1mpython -m unittest -v^[[0m
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.0336930Z shell: /usr/bin/bash -e {0}
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.0337176Z env:
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.0337413Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.0337778Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.0338146Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.0338480Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.0338780Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.0339075Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.0339331Z ##[endgroup]
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.4532288Z test_addition (test_calc.AddTests.test_addition) ... ok
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.4532914Z 
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.4533322Z ----------------------------------------------------------------------
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.4533730Z Ran 1 test in 0.000s
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.4533986Z 
+test (3.12)	Run python -m unittest -v	2026-11-06T21:42:33.4534080Z OK
+test (3.12)	Post Run actions/setup-python@v5	﻿2026-11-06T21:42:33.4701419Z Post job cleanup.
+test (3.12)	Post Run actions/setup-python@v5	2026-11-06T21:42:33.5725451Z (node:2195) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test (3.12)	Post Run actions/setup-python@v5	2026-11-06T21:42:33.5726128Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test (3.12)	Post Run actions/checkout@v4	﻿2026-11-06T21:42:33.5897010Z Post job cleanup.
+test (3.12)	Post Run actions/checkout@v4	2026-11-06T21:42:33.6640298Z [command]/usr/bin/git version
+test (3.12)	Post Run actions/checkout@v4	2026-11-06T21:42:33.6677930Z git version 2.56.0
+test (3.12)	Post Run actions/checkout@v4	2026-11-06T21:42:33.6711281Z Temporarily overriding HOME='/home/runner/work/_temp/145c02b5-ea6d-4384-b0d4-89088c557c86' before making global git config changes
+test (3.12)	Post Run actions/checkout@v4	2026-11-06T21:42:33.6712473Z Adding repository directory to the temporary git global config as a safe directory
+test (3.12)	Post Run actions/checkout@v4	2026-11-06T21:42:33.6716510Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/23L-0727_A2_Ops-ci-toy/23L-0727_A2_Ops-ci-toy
+test (3.12)	Post Run actions/checkout@v4	2026-11-06T21:42:33.6751136Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test (3.12)	Post Run actions/checkout@v4	2026-11-06T21:42:33.6784451Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test (3.12)	Post Run actions/checkout@v4	2026-11-06T21:42:33.7066823Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test (3.12)	Post Run actions/checkout@v4	2026-11-06T21:42:33.7089824Z http.https://github.com/.extraheader
+test (3.12)	Post Run actions/checkout@v4	2026-11-06T21:42:33.7107858Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+test (3.12)	Post Run actions/checkout@v4	2026-11-06T21:42:33.7133313Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test (3.12)	Post Run actions/checkout@v4	2026-11-06T21:42:33.7423563Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test (3.12)	Post Run actions/checkout@v4	2026-11-06T21:42:33.7457202Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test (3.12)	Complete job	﻿2026-11-06T21:42:33.7829038Z Cleaning up orphan processes
+test (3.12)	Complete job	2026-11-06T21:42:33.8155959Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,0 +1,58 @@
+[
+  {
+    "stage": "baseline",
+    "run_id": "f582e383ee6247d1a2c15f9a7f34d310"
+  },
+  {
+    "stage": "head",
+    "run_id": "97789e8f70db4436b2b8ca2382b2327a"
+  },
+  {
+    "stage": "finetune",
+    "run_id": "6017bdef399b4ddb8f62473d55d47e6a"
+  },
+  {
+    "trial_id": 4,
+    "run_id": "f1fcba0d43db49688d452b0d0d3ce529",
+    "val_loss": 0.4738284051418304
+  },
+  {
+    "trial_id": 6,
+    "run_id": "b096c08c915b4697b9ca964e8981f0ff",
+    "val_loss": 0.4891072511672973
+  },
+  {
+    "trial_id": 1,
+    "run_id": "b730510dcb2c413581a9d8df5fe19a35",
+    "val_loss": 0.4962390661239624
+  },
+  {
+    "trial_id": 2,
+    "run_id": "43b9aebc37084f1cb3c82dc3c687f16f",
+    "val_loss": 0.5012117624282837
+  },
+  {
+    "trial_id": 5,
+    "run_id": "7da0d3e41f1742f9be4d46c430181d5a",
+    "val_loss": 0.516767144203186
+  },
+  {
+    "trial_id": 3,
+    "run_id": "deb8b7abbc474539a52d61b3f954188d",
+    "val_loss": 0.5184946060180664
+  },
+  {
+    "trial_id": 0,
+    "run_id": "f6ee90f1c1334729a9948dbb1066883c",
+    "val_loss": 0.5211918354034424
+  },
+  {
+    "trial_id": 7,
+    "run_id": "01ba50bb59a140c28f5faa2d9daba14f",
+    "val_loss": 0.5249460339546204
+  },
+  {
+    "champion_run_id": "dd607ee0482b4ab99423f79b28cfdfc9",
+    "model_version": "2"
+  }
+]

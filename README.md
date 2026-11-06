@@ -26,3 +26,9 @@ The original T4 model comparison and threshold were locked before the original h
 Image bytes are decoded and processed in memory. Only sanitized filenames, UTC timestamps, decisions, scores, model identities, and latency are stored. The detector can make mistakes; scores are not calibrated proof of authenticity.
 
 The PDF report records the completed verification and deployment evidence. Credentials, runtime databases, dataset bytes, and caches are excluded from Git. AI assistance and sources are disclosed as required by the assignment.
+
+## Submission and live demonstration
+
+Submit the PDF and `23L-0727_A2_Submission.zip` from `submission/`. The ZIP includes source, model metadata and champion, executed notebook, and supporting evidence. See [deployment instructions](docs/DEPLOYMENT.md) for fresh local setup and cloud restart.
+
+The verified cloud API base is https://shiny-memory-g4467vr6gq7pc97pw-8001.app.github.dev. Predictions require the private assignment key; health is public. Codespaces can sleep, so resume it and restore public port 8001 before grading. The external Postman collection passed in [GitHub Actions](https://github.com/HayyanHaider/23L-0727_A2_Ops/actions/runs/42303357317). Both valid demonstration inputs reached the model; the AI-labelled example was classified as Real, which is a retained model error rather than a transport failure.

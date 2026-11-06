@@ -1,0 +1,40 @@
+{
+  "project": "23L-0727_A2_Ops",
+  "timestamp": "2026-11-06T21:25:30.229269+00:00",
+  "base_url": "http://127.0.0.1:8000",
+  "health": {
+    "database": "ready",
+    "debug": false,
+    "mode": "resident_model",
+    "model_version": "2",
+    "project": "23L-0727_A2_Ops",
+    "status": "ok"
+  },
+  "cases": [
+    {
+      "filename": "known_real.png",
+      "status": 200,
+      "elapsed_ms": 324.61
+    },
+    {
+      "filename": "known_ai.png",
+      "status": 200,
+      "elapsed_ms": 72.74
+    },
+    {
+      "filename": "wrong.exe",
+      "status": 400,
+      "elapsed_ms": 2.83
+    },
+    {
+      "filename": "corrupt.png",
+      "status": 400,
+      "elapsed_ms": 106.02
+    },
+    {
+      "filename": "oversize.png",
+      "status": 413,
+      "elapsed_ms": 9.82
+    }
+  ]
+}

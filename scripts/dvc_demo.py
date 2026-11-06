@@ -32,8 +32,8 @@ def demo(destination):
         result.check_returncode()
         return result.stdout.strip()
     def git(*args):
-        return run('git', '-c', 'user.name=VisionGuard Toy Demo', '-c',
-                   'user.email=visionguard-demo@example.invalid', *args)
+        return run('git', '-c', 'user.name=Hayyan Haider', '-c',
+                   'user.email=HayyanHaider@users.noreply.github.com', *args)
     def dvc(*args):
         return run(sys.executable, '-m', 'dvc', *args)
     git('init', '-b', 'main')

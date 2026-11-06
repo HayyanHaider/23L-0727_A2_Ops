@@ -1,0 +1,34 @@
+
+$ docker-compose exec -T db sh -c psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -tA -c "SELECT count(*) FROM predictions;"
+2
+
+$ docker-compose down
+ Container 23l-0727-a2-ops-web-1 Stopping 
+ Container 23l-0727-a2-ops-web-1 Stopped 
+ Container 23l-0727-a2-ops-web-1 Removing 
+ Container 23l-0727-a2-ops-web-1 Removed 
+ Container 23l-0727-a2-ops-db-1 Stopping 
+ Container 23l-0727-a2-ops-db-1 Stopped 
+ Container 23l-0727-a2-ops-db-1 Removing 
+ Container 23l-0727-a2-ops-db-1 Removed 
+ Network 23l-0727-a2-ops_default Removing 
+ Network 23l-0727-a2-ops_default Removed 
+
+$ docker-compose up -d
+ Network 23l-0727-a2-ops_default Creating 
+ Network 23l-0727-a2-ops_default Creating 
+ Network 23l-0727-a2-ops_default Created 
+ Network 23l-0727-a2-ops_default Created 
+ Container 23l-0727-a2-ops-db-1 Creating 
+ Container 23l-0727-a2-ops-db-1 Created 
+ Container 23l-0727-a2-ops-web-1 Creating 
+ Container 23l-0727-a2-ops-web-1 Created 
+ Container 23l-0727-a2-ops-db-1 Starting 
+ Container 23l-0727-a2-ops-db-1 Started 
+ Container 23l-0727-a2-ops-db-1 Waiting 
+ Container 23l-0727-a2-ops-db-1 Healthy 
+ Container 23l-0727-a2-ops-web-1 Starting 
+ Container 23l-0727-a2-ops-web-1 Started 
+
+$ docker-compose exec -T db sh -c psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -tA -c "SELECT count(*) FROM predictions;"
+2

@@ -1,0 +1,12 @@
+web-1  | [2026-11-06 21:26:02 +0000] [1] [INFO] Starting gunicorn 23.0.0
+web-1  | [2026-11-06 21:26:02 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+web-1  | [2026-11-06 21:26:02 +0000] [1] [INFO] Using worker: gthread
+web-1  | [2026-11-06 21:26:02 +0000] [7] [INFO] Booting worker with pid: 7
+web-1  | 127.0.0.1 - - [06/Nov/2026:21:26:07 +0000] "GET /health HTTP/1.1" 200 121 "-" "Python-urllib/3.11"
+web-1  | 127.0.0.1 - - [06/Nov/2026:21:26:27 +0000] "GET /health HTTP/1.1" 200 121 "-" "Python-urllib/3.11"
+web-1  | 127.0.0.1 - - [06/Nov/2026:21:26:47 +0000] "GET /health HTTP/1.1" 200 121 "-" "Python-urllib/3.11"
+web-1  | 127.0.0.1 - - [06/Nov/2026:21:27:07 +0000] "GET /health HTTP/1.1" 200 121 "-" "Python-urllib/3.11"
+web-1  | 172.18.0.1 - - [06/Nov/2026:21:27:20 +0000] "GET /health HTTP/1.1" 200 121 "-" "python-requests/2.34.2"
+web-1  | 172.18.0.1 - - [06/Nov/2026:21:27:21 +0000] "POST /api/predict HTTP/1.1" 200 411 "-" "python-requests/2.34.2"
+web-1  | 172.18.0.1 - - [06/Nov/2026:21:27:22 +0000] "POST /api/predict HTTP/1.1" 200 408 "-" "python-requests/2.34.2"
+web-1  | 172.18.0.1 - - [06/Nov/2026:21:27:22 +0000] "POST /api/predict HTTP/1.1" 400 46 "-" "python-requests/2.34.2"

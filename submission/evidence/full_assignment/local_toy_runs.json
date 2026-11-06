@@ -1,0 +1,18 @@
+[
+  {
+    "run_id": "b554c92b899d45188b475499184df722",
+    "learning_rate": 0.01,
+    "accuracy": 0.798828125,
+    "loss": 0.5790663957595825,
+    "val_accuracy": 0.69140625,
+    "val_loss": 0.7874552011489868
+  },
+  {
+    "run_id": "40bee3fae20341669ed63ba22e3b24f2",
+    "learning_rate": 0.001,
+    "accuracy": 0.693359375,
+    "loss": 0.943684995174408,
+    "val_accuracy": 0.62890625,
+    "val_loss": 1.022913932800293
+  }
+]

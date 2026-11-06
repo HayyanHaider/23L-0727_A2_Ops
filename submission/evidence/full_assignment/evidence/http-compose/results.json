@@ -1,0 +1,73 @@
+{
+  "project": "23L-0727_A2_Ops",
+  "timestamp": "2026-11-06T21:26:56.474301+00:00",
+  "base_url": "http://127.0.0.1:8002",
+  "health": {
+    "database": "ready",
+    "debug": false,
+    "mode": "resident_model",
+    "model_version": "2",
+    "project": "23L-0727_A2_Ops",
+    "status": "ok"
+  },
+  "cases": [
+    {
+      "filename": "known_real.png",
+      "status": 200,
+      "elapsed_ms": 1276.33,
+      "response": {
+        "ai_score": 0.21879278123378754,
+        "caveat": "A model estimate, not proof of authenticity. Scores are not calibrated probabilities.",
+        "confidence": 0.7812072187662125,
+        "filename": "known_real.png",
+        "label": "Real",
+        "latency_ms": 1139.75,
+        "model_sha256": "086258a9016fd9db5d7aa664900250921ef5596d2fb9ce7a94de21c4653d86a5",
+        "model_version": "2",
+        "request_id": "64141a23-d8bb-4ed6-a056-a74984583165",
+        "threshold": 0.6806868314743042
+      }
+    },
+    {
+      "filename": "known_ai.png",
+      "status": 200,
+      "elapsed_ms": 391.99,
+      "response": {
+        "ai_score": 0.5264327526092529,
+        "caveat": "A model estimate, not proof of authenticity. Scores are not calibrated probabilities.",
+        "confidence": 0.47356724739074707,
+        "filename": "known_ai.png",
+        "label": "Real",
+        "latency_ms": 364.39,
+        "model_sha256": "086258a9016fd9db5d7aa664900250921ef5596d2fb9ce7a94de21c4653d86a5",
+        "model_version": "2",
+        "request_id": "6c81dd95-13d7-4c22-a205-64893a27311d",
+        "threshold": 0.6806868314743042
+      }
+    },
+    {
+      "filename": "wrong.exe",
+      "status": 400,
+      "elapsed_ms": 6.37,
+      "response": {
+        "error": "Choose a JPG, PNG, or WebP image."
+      }
+    },
+    {
+      "filename": "corrupt.png",
+      "status": 400,
+      "elapsed_ms": 76.4,
+      "response": {
+        "error": "This file cannot be decoded as a valid image."
+      }
+    },
+    {
+      "filename": "oversize.png",
+      "status": 413,
+      "elapsed_ms": 33.92,
+      "response": {
+        "error": "The upload is too large. Choose a file smaller than 5 MB."
+      }
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
-  "first_commit": "edae2050b580c170042a20a80adb59d536f783b5",
-  "second_commit": "911bc3f41a0ea52a11ea3490bd8f8f18f3f653fa",
-  "restored_commit": "edae2050b580c170042a20a80adb59d536f783b5",
-  "remote": "/Users/muzzammilshahid/Desktop/mlops_a2/outputs/23L-0727_A2_Ops/dvc_toy/remote",
+  "first_commit": "1adeb67128fbb12396cfcd86f655fd17247261d6",
+  "second_commit": "ce8440c5e4f0da7f6365ea9250655d4185697450",
+  "restored_commit": "1adeb67128fbb12396cfcd86f655fd17247261d6",
+  "remote": "/Users/muzzammilshahid/Desktop/mlops_a2/outputs/full_assignment/dvc_toy/remote",
   "csv": "id,label\n1,real\n2,ai\n",
   "verified": true,
   "note": "Local round trip completed. Push both commits to your DagsHub toy repository separately."

@@ -1,0 +1,74 @@
+[
+  {
+    "run_id": "b9c4e10a4f064cc99c515736c4b2a937",
+    "logging": "manual",
+    "learning_rate": 0.001,
+    "dropout": 0.3,
+    "accuracy": 0.8426470756530762,
+    "auc": 0.909443199634552,
+    "loss": 0.38852691650390625,
+    "val_accuracy": 0.7602739930152893,
+    "val_auc": 0.8121557235717773,
+    "val_loss": 0.5343570709228516
+  },
+  {
+    "run_id": "5be408bdf432466eb4dce5bf65a66d74",
+    "logging": "autolog",
+    "learning_rate": 0.0001,
+    "dropout": 0.3,
+    "accuracy": 0.804411768913269,
+    "auc": 0.882270097732544,
+    "loss": 0.4375978410243988,
+    "val_accuracy": 0.7465753555297852,
+    "val_auc": 0.8055080771446228,
+    "val_loss": 0.5391229391098022
+  },
+  {
+    "run_id": "509538557bf34acab9e2b8ca72e5f73d",
+    "logging": "manual",
+    "learning_rate": 0.01,
+    "dropout": 0.3,
+    "accuracy": 0.8602941036224365,
+    "auc": 0.932697057723999,
+    "loss": 0.33231109380722046,
+    "val_accuracy": 0.732876718044281,
+    "val_auc": 0.8026590347290039,
+    "val_loss": 0.7244130373001099
+  },
+  {
+    "run_id": "7dc125724e4a41ebbcdb7ad543b26a85",
+    "logging": "manual",
+    "learning_rate": 0.001,
+    "dropout": 0.0,
+    "accuracy": 0.8985294103622437,
+    "auc": 0.9515590071678162,
+    "loss": 0.31512632966041565,
+    "val_accuracy": 0.7739726305007935,
+    "val_auc": 0.8139601349830627,
+    "val_loss": 0.5359889268875122
+  },
+  {
+    "run_id": "fcc4ccc621bd441da045342977c907a8",
+    "logging": "manual",
+    "learning_rate": 0.001,
+    "dropout": 0.5,
+    "accuracy": 0.7955882549285889,
+    "auc": 0.8757786154747009,
+    "loss": 0.4490426480770111,
+    "val_accuracy": 0.767123281955719,
+    "val_auc": 0.8112061023712158,
+    "val_loss": 0.534618616104126
+  },
+  {
+    "run_id": "8c394a2c610944d9ab0204628bca77c8",
+    "logging": "manual",
+    "learning_rate": 0.001,
+    "dropout": 0.7,
+    "accuracy": 0.7602941393852234,
+    "auc": 0.8160212635993958,
+    "loss": 0.5638524889945984,
+    "val_accuracy": 0.7465753555297852,
+    "val_auc": 0.8099715113639832,
+    "val_loss": 0.5373952388763428
+  }
+]

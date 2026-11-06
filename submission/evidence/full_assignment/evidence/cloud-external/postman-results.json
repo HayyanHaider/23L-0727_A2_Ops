@@ -1,0 +1,99 @@
+{
+  "project": "23L-0727_A2_Ops",
+  "timestamp": "2026-11-06T22:16:18.090Z",
+  "baseUrl": "https://shiny-memory-g4467vr6gq7pc97pw-8001.app.github.dev",
+  "stats": {
+    "iterations": {
+      "total": 1,
+      "pending": 0,
+      "failed": 0
+    },
+    "items": {
+      "total": 4,
+      "pending": 0,
+      "failed": 0
+    },
+    "scripts": {
+      "total": 4,
+      "pending": 0,
+      "failed": 0
+    },
+    "prerequests": {
+      "total": 4,
+      "pending": 0,
+      "failed": 0
+    },
+    "requests": {
+      "total": 4,
+      "pending": 0,
+      "failed": 0
+    },
+    "tests": {
+      "total": 4,
+      "pending": 0,
+      "failed": 0
+    },
+    "assertions": {
+      "total": 4,
+      "pending": 0,
+      "failed": 0
+    },
+    "testScripts": {
+      "total": 4,
+      "pending": 0,
+      "failed": 0
+    },
+    "prerequestScripts": {
+      "total": 0,
+      "pending": 0,
+      "failed": 0
+    }
+  },
+  "failures": [],
+  "requests": [
+    {
+      "name": "Public health from external network",
+      "status": 200,
+      "response": "{\"database\":\"ready\",\"debug\":false,\"mode\":\"resident_model\",\"model_version\":\"2\",\"project\":\"23L-0727_A2_Ops\",\"status\":\"ok\"}\n",
+      "assertions": [
+        {
+          "assertion": "Health is ready",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "Known real image",
+      "status": 200,
+      "response": "{\"ai_score\":0.21879269182682037,\"caveat\":\"A model estimate, not proof of authenticity. Scores are not calibrated probabilities.\",\"confidence\":0.7812073081731796,\"filename\":\"known_real.png\",\"label\":\"Real\",\"latency_ms\":318.76,\"model_sha256\":\"086258a9016fd9db5d7aa664900250921ef5596d2fb9ce7a94de21c4653d86a5\",\"model_version\":\"2\",\"request_id\":\"1840a5f4-1f68-4aed-9bd4-779a54806e50\",\"threshold\":0.6806868314743042}\n",
+      "assertions": [
+        {
+          "assertion": "Prediction succeeds",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "Known AI image",
+      "status": 200,
+      "response": "{\"ai_score\":0.5264301896095276,\"caveat\":\"A model estimate, not proof of authenticity. Scores are not calibrated probabilities.\",\"confidence\":0.4735698103904724,\"filename\":\"known_ai.png\",\"label\":\"Real\",\"latency_ms\":228.02,\"model_sha256\":\"086258a9016fd9db5d7aa664900250921ef5596d2fb9ce7a94de21c4653d86a5\",\"model_version\":\"2\",\"request_id\":\"030f1990-f7e7-48d0-87d6-346e827d98f3\",\"threshold\":0.6806868314743042}\n",
+      "assertions": [
+        {
+          "assertion": "Prediction succeeds",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "Reject missing API key",
+      "status": 401,
+      "response": "{\"error\":\"A valid API key is required.\"}\n",
+      "assertions": [
+        {
+          "assertion": "Authentication enforced",
+          "skipped": false
+        }
+      ]
+    }
+  ]
+}

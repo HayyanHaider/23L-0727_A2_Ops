@@ -1,4 +1,4 @@
-"""Build the Tasks 1-2 PDF from actual exported Colab evidence."""
+"""Build the complete Tasks 1-8 PDF from actual exported Colab evidence."""
 import json
 import csv
 import subprocess
@@ -56,7 +56,7 @@ def footer(canvas,doc):
     w,h=doc.pagesize
     canvas.setStrokeColor(colors.HexColor('#b7c8dc'));canvas.line(48,42,w-48,42)
     canvas.setFont('Helvetica',8);canvas.setFillColor(colors.HexColor('#546378'))
-    canvas.drawString(48,29,'23L-0727_A2_Ops  |  VisionGuard  |  Tasks 1 and 2')
+    canvas.drawString(48,29,'23L-0727_A2_Ops  |  VisionGuard  |  Tasks 1-8')
     canvas.drawRightString(w-48,29,str(doc.page));canvas.restoreState()
 
 def build():
@@ -67,10 +67,10 @@ def build():
     links=js(E/'submission_metadata.json')
     para('VISIONGUARD','TitleVG')
     para('AI-generated vs real image classification','HVG')
-    para('Task 1: Data Understanding and Versioning<br/>Task 2: Model Development with TensorFlow/Keras')
+    para('MLOps Assignment 2<br/>Data, training, tracking, serving, containers, CI, and cloud integration')
     story.append(Spacer(1,24))
-    table([['Submission detail','Value'],['Name',links.get('name','Hayyan Haider')],['Roll number','23L-0727'],['Project','23L-0727_A2_Ops'],['Date','6 November 2026 (Asia/Karachi)'],['Graded source commit',links['commit']],['GitHub',links['github']],['DagsHub',links['dagshub']],['Colab notebook','https://colab.research.google.com/drive/1DUeUYKEAaNH7_sl6O8K48r6MESux_Htl'],['Scope','Tasks 1 and 2 only. Deployment/API work belongs to later tasks.']],[116,377])
-    para('<b>AI assistance disclosure.</b> OpenAI Codex helped prepare and repair the audit and training code, operated the Colab experiment, inspected evidence, and drafted this report. The reported measurements come from the actual assignment dataset and saved experiment outputs. The student should review the code, results, and interpretations before submission.')
+    table([['Submission detail','Value'],['Name',links.get('name','Hayyan Haider')],['Roll number','23L-0727'],['Project','23L-0727_A2_Ops'],['Date','7 November 2026 (Asia/Karachi)'],['Graded source commit',links['commit']],['GitHub',links['github']],['DagsHub',links['dagshub']],['Colab notebook','https://colab.research.google.com/drive/1DUeUYKEAaNH7_sl6O8K48r6MESux_Htl'],['Scope','All eight required tasks. Optional Grad-CAM bonus not attempted.']],[116,377])
+    para('<b>AI assistance disclosure.</b> OpenAI Codex helped prepare and repair the audit and training code, operated the Colab experiment, implemented and tested tracking and serving infrastructure, inspected evidence, and drafted this report. The reported measurements come from the actual assignment dataset and saved experiment outputs. The student should review the code, results, and interpretations before submission.')
     para('The experiment uses folder labels (AI=1, real=0). These labels are dataset annotations; a model score is not proof of image authenticity. All test figures reuse one inference pass per final model.')
 
     page('Task 1 - Data Understanding and Versioning')
@@ -118,7 +118,7 @@ def build():
     para('The raw DVC pointer counts 975 files, while the image audit counts 973 candidates: DVC also includes two hidden .DS_Store files ignored by the image audit. This difference does not indicate two unreadable images.')
     shot('dvc_dataset.png','Browser view of the actual saved raw pointer and freshly executed DVC remote status. The log file is included in the evidence bundle.',300)
     page('1.4 - Published project and version history')
-    para('Screenshots are cropped browser captures. The DagsHub excerpts omit the browser address bar and account header; the displayed repository records and results are unchanged. The software cursor overlay is excluded. The GitHub project is mirrored to DagsHub under the required roll-number project name. The dvc-toy branch preserves both CSV versions, while main contains the audited dataset pointers and model development source. Figure '+str(fig+1)+' shows the published project; large data objects remain in the permitted local DVC remote.')
+    para('Screenshots are genuine browser captures. New DagsHub evidence shows HayyanHaider; the displayed repository records and results are unchanged. macOS window captures exclude the software cursor overlay. The GitHub project is mirrored to DagsHub under the required roll-number project name. The dvc-toy branch preserves both CSV versions, while main contains the audited dataset pointers and model development source. Figure '+str(fig+1)+' shows the published project; large data objects remain in the permitted local DVC remote.')
     shot('dagshub.png','DagsHub repository excerpt: branch, source commit, and tracked files; account header cropped.',355)
     para('The local remote satisfies the permitted storage option. Reproducing on another computer requires access to that remote or an exported copy and an updated remote path; a Git clone alone cannot reconstruct excluded image bytes.')
 
@@ -176,7 +176,7 @@ def build():
             iw,ih=ImageReader(str(p)).getSize();cells.append(Image(str(p),width=240,height=240*ih/iw))
         story.append(Table([cells],colWidths=[246,247]))
         para(m+': confusion matrix (rows=true, columns=prediction) and held-out ROC curve.','CaptionVG')
-    para('Each final model predicts the test set exactly once. Probabilities, row-level predictions, and labels are saved, and the confusion matrix, ROC, metrics, and error grids are derived from that same pass. Accuracy is (TP+TN)/N; precision=TP/(TP+FP); recall=TP/(TP+FN); F1 is their harmonic mean. No model was retrained after the held-out metrics were exposed.')
+    para('Each final model predicts the test set exactly once. Probabilities, row-level predictions, and labels are saved, and the confusion matrix, ROC, metrics, and error grids are derived from that same pass. Accuracy is (TP+TN)/N; precision=TP/(TP+FP); recall=TP/(TP+FN); F1 is their harmonic mean. The champion was not retrained after the held-out metrics were exposed. Later tracking labs train separate validation-only diagnostic heads and never change the selected champion.')
 
     for m in ['transfer']:
         page('2.6 - Error analysis: '+m)
@@ -216,11 +216,12 @@ def build():
     para('The source repository contains the audit, pipeline/models, tuning, threshold/evaluation code, and standalone notebook. The evidence bundle includes the exact environment, split manifests, source hashes, curves, checkpoints, tuner state, and saved predictions. The report builder reads these outputs and refuses to build without COMPLETE.json and at least eight completed applied trials.')
     table([['Observed issue','Resolution and evidence'],['PNG decoding failure','Lossless re-encoding from the audited original; 972/972 pixel hashes verified, one file repaired.'],['Slow repeated full-resolution decode','Cache resized deterministic inputs before per-epoch shuffle; augmentation remains dynamic.'],['Google Drive storage quota','Use runtime-local output storage and download evidence/checkpoints. Existing Drive content was not deleted.']],[140,353])
     para('For a new run: create a virtual environment; install requirements; audit the originals; verify labels and split hashes; run the PNG integrity repair; execute scripts.run_training with a new output directory. Use the provided unchanged settings for a pre-test resume. After test access, read saved predictions rather than repeating model selection.')
-    para('Task 3 experiment tracking and Tasks 4-8 serving, database, containers, cloud deployment, and API integration are outside this Tasks 1-2 submission. The optional Grad-CAM bonus is also outside this report. Local saved experiment evidence is not claimed as remote MLflow tracking.')
+    from scripts.full_report_sections import append_sections
+    append_sections(globals())
     for label,url in [('Assignment dataset','https://www.kaggle.com/datasets/cashbowman/ai-generated-images-vs-real-images'),('TensorFlow transfer learning','https://www.tensorflow.org/guide/keras/transfer_learning'),('Keras Tuner getting started','https://keras.io/keras_tuner/getting_started/'),('DVC remote storage','https://dvc.org/doc/user-guide/data-management/remote-storage')]:
         para(f'<b>{label}:</b> <link href="{url}" color="#1c5c91">{url}</link>','SmallVG')
     OUT.parent.mkdir(exist_ok=True)
-    doc=SimpleDocTemplate(str(OUT),pagesize=(595.276,841.89),rightMargin=51,leftMargin=51,topMargin=47,bottomMargin=56,title='VisionGuard - Tasks 1 and 2 - 23L-0727',author=links.get('name','Hayyan Haider'))
+    doc=SimpleDocTemplate(str(OUT),pagesize=(595.276,841.89),rightMargin=51,leftMargin=51,topMargin=47,bottomMargin=56,title='VisionGuard - Tasks 1-8 - 23L-0727',author=links.get('name','Hayyan Haider'))
     doc.build(story,onFirstPage=footer,onLaterPages=footer)
     print(OUT)
 

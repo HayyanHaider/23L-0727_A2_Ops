@@ -1,0 +1,45 @@
+2026/11/07 02:39:13 INFO mlflow.tracking.fluent: Experiment with name '23L-0727_A2_Ops-toy' does not exist. Creating a new experiment.
+Epoch 1/3
+16/16 - 1s - 75ms/step - accuracy: 0.5049 - loss: 1.3916 - val_accuracy: 0.5508 - val_loss: 1.0984
+Epoch 2/3
+16/16 - 0s - 27ms/step - accuracy: 0.7334 - loss: 0.7458 - val_accuracy: 0.6484 - val_loss: 0.8541
+Epoch 3/3
+16/16 - 0s - 26ms/step - accuracy: 0.7988 - loss: 0.5791 - val_accuracy: 0.6914 - val_loss: 0.7875
+2026/11/07 02:39:21 WARNING mlflow.tensorflow: You are saving a TensorFlow Core model or Keras model without a signature. Inference with mlflow.pyfunc.spark_udf() will not work unless the model's pyfunc representation accepts pandas DataFrames as inference inputs.
+2026/11/07 02:39:22 WARNING mlflow.utils.requirements_utils: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - numpy (current: 2.4.6, required: numpy==2.2.6)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[31m2026/11/07 02:39:22 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.[0m
+🏃 View run fashion-mnist-lr-0.01 at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/1/runs/57e7832ba2574b628324102d9c2ed256
+🧪 View experiment at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/1
+Epoch 1/3
+16/16 - 3s - 214ms/step - accuracy: 0.3730 - loss: 1.8740 - val_accuracy: 0.5547 - val_loss: 1.5119
+Epoch 2/3
+16/16 - 4s - 254ms/step - accuracy: 0.6729 - loss: 1.2306 - val_accuracy: 0.5898 - val_loss: 1.1476
+Epoch 3/3
+16/16 - 8s - 506ms/step - accuracy: 0.6934 - loss: 0.9437 - val_accuracy: 0.6289 - val_loss: 1.0229
+2026/11/07 02:40:45 WARNING mlflow.tensorflow: You are saving a TensorFlow Core model or Keras model without a signature. Inference with mlflow.pyfunc.spark_udf() will not work unless the model's pyfunc representation accepts pandas DataFrames as inference inputs.
+2026/11/07 02:40:45 WARNING mlflow.utils.requirements_utils: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - numpy (current: 2.4.6, required: numpy==2.2.6)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[31m2026/11/07 02:40:45 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.[0m
+🏃 View run fashion-mnist-lr-0.001 at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/1/runs/0989b8a24f7e4142a43fd39a9283c5ad
+🧪 View experiment at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/1
+[
+  {
+    "run_id": "57e7832ba2574b628324102d9c2ed256",
+    "learning_rate": 0.01,
+    "accuracy": 0.798828125,
+    "loss": 0.5790663957595825,
+    "val_accuracy": 0.69140625,
+    "val_loss": 0.7874552011489868
+  },
+  {
+    "run_id": "0989b8a24f7e4142a43fd39a9283c5ad",
+    "learning_rate": 0.001,
+    "accuracy": 0.693359375,
+    "loss": 0.943684995174408,
+    "val_accuracy": 0.62890625,
+    "val_loss": 1.022913932800293
+  }
+]

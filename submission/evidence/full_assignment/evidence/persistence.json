@@ -1,0 +1,6 @@
+{
+  "before": 2,
+  "after": 2,
+  "verified": true,
+  "method": "compose down without -v, then up; named PostgreSQL volume retained"
+}

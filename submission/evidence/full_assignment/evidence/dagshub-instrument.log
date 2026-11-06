@@ -1,0 +1,197 @@
+Epoch 1/5
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1794001156.898931 34110159 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+22/22 - 1s - 49ms/step - accuracy: 0.7838 - auc: 0.8862 - loss: 0.4225 - val_accuracy: 0.7466 - val_auc: 0.8096 - val_loss: 0.5386
+Epoch 2/5
+22/22 - 0s - 21ms/step - accuracy: 0.8176 - auc: 0.8958 - loss: 0.4096 - val_accuracy: 0.7740 - val_auc: 0.8102 - val_loss: 0.5375
+Epoch 3/5
+22/22 - 0s - 22ms/step - accuracy: 0.8485 - auc: 0.9090 - loss: 0.3913 - val_accuracy: 0.7603 - val_auc: 0.8081 - val_loss: 0.5398
+Epoch 4/5
+22/22 - 0s - 21ms/step - accuracy: 0.8368 - auc: 0.9149 - loss: 0.3784 - val_accuracy: 0.7466 - val_auc: 0.8095 - val_loss: 0.5395
+Epoch 5/5
+22/22 - 6s - 284ms/step - accuracy: 0.8426 - auc: 0.9094 - loss: 0.3885 - val_accuracy: 0.7603 - val_auc: 0.8122 - val_loss: 0.5344
+/Users/muzzammilshahid/Desktop/mlops_a2/.venv-tf/lib/python3.11/site-packages/keras/src/saving/saving_lib.py:869: UserWarning: Skipping variable loading for optimizer 'adam_1', because it has 2 variables whereas the saved optimizer has 6 variables. 
+  saveable.load_own_variables(store)
+2026/11/07 02:39:26 WARNING mlflow.tensorflow: You are saving a TensorFlow Core model or Keras model without a signature. Inference with mlflow.pyfunc.spark_udf() will not work unless the model's pyfunc representation accepts pandas DataFrames as inference inputs.
+2026/11/07 02:39:26 WARNING mlflow.utils.requirements_utils: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - numpy (current: 2.4.6, required: numpy==2.2.6)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[31m2026/11/07 02:39:26 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.[0m
+2026/11/07 02:41:05 WARNING mlflow.utils.autologging_utils: MLflow tensorflow autologging is known to be compatible with 2.7.4 <= tensorflow <= 2.19.0, but the installed version is 2.21.0. If you encounter errors during autologging, try upgrading / downgrading tensorflow to a compatible version, or try upgrading MLflow.
+🏃 View run frozen-head-manual-0 at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/0/runs/b9c4e10a4f064cc99c515736c4b2a937
+🧪 View experiment at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/0
+Epoch 1/5
+E0000 00:00:1794001305.840447 34110159 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+22/22 - 24s - 1s/step - accuracy: 0.7941 - auc: 0.8917 - loss: 0.4143 - val_accuracy: 0.7466 - val_auc: 0.8052 - val_loss: 0.5378
+Epoch 2/5
+22/22 - 0s - 3ms/step - accuracy: 0.7985 - auc: 0.8862 - loss: 0.4258 - val_accuracy: 0.7534 - val_auc: 0.8039 - val_loss: 0.5381
+Epoch 3/5
+22/22 - 0s - 3ms/step - accuracy: 0.8162 - auc: 0.8941 - loss: 0.4170 - val_accuracy: 0.7534 - val_auc: 0.8045 - val_loss: 0.5383
+Epoch 4/5
+22/22 - 0s - 2ms/step - accuracy: 0.8074 - auc: 0.8940 - loss: 0.4156 - val_accuracy: 0.7466 - val_auc: 0.8049 - val_loss: 0.5392
+Epoch 5/5
+22/22 - 0s - 2ms/step - accuracy: 0.8044 - auc: 0.8823 - loss: 0.4376 - val_accuracy: 0.7466 - val_auc: 0.8055 - val_loss: 0.5391
+/Users/muzzammilshahid/Desktop/mlops_a2/.venv-tf/lib/python3.11/site-packages/keras/src/saving/saving_lib.py:869: UserWarning: Skipping variable loading for optimizer 'adam_3', because it has 2 variables whereas the saved optimizer has 6 variables. 
+  saveable.load_own_variables(store)
+2026/11/07 02:42:42 WARNING mlflow.tensorflow: You are saving a TensorFlow Core model or Keras model without a signature. Inference with mlflow.pyfunc.spark_udf() will not work unless the model's pyfunc representation accepts pandas DataFrames as inference inputs.
+2026/11/07 02:42:44 WARNING mlflow.utils.requirements_utils: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - numpy (current: 2.4.6, required: numpy==2.2.6)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[31m2026/11/07 02:42:44 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.[0m
+🏃 View run frozen-head-autolog-1 at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/0/runs/5be408bdf432466eb4dce5bf65a66d74
+🧪 View experiment at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/0
+Epoch 1/5
+E0000 00:00:1794001490.510419 34110159 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+22/22 - 1s - 50ms/step - accuracy: 0.7382 - auc: 0.8143 - loss: 0.5464 - val_accuracy: 0.7466 - val_auc: 0.7901 - val_loss: 0.6298
+Epoch 2/5
+22/22 - 0s - 22ms/step - accuracy: 0.8559 - auc: 0.9086 - loss: 0.3834 - val_accuracy: 0.7123 - val_auc: 0.8053 - val_loss: 0.6642
+Epoch 3/5
+22/22 - 1s - 30ms/step - accuracy: 0.8544 - auc: 0.9234 - loss: 0.3531 - val_accuracy: 0.7123 - val_auc: 0.7950 - val_loss: 0.7550
+Epoch 4/5
+22/22 - 5s - 248ms/step - accuracy: 0.8529 - auc: 0.9253 - loss: 0.3479 - val_accuracy: 0.7192 - val_auc: 0.7952 - val_loss: 0.7644
+Epoch 5/5
+22/22 - 0s - 22ms/step - accuracy: 0.8603 - auc: 0.9327 - loss: 0.3323 - val_accuracy: 0.7329 - val_auc: 0.8027 - val_loss: 0.7244
+/Users/muzzammilshahid/Desktop/mlops_a2/.venv-tf/lib/python3.11/site-packages/keras/src/saving/saving_lib.py:869: UserWarning: Skipping variable loading for optimizer 'adam_5', because it has 2 variables whereas the saved optimizer has 6 variables. 
+  saveable.load_own_variables(store)
+2026/11/07 02:44:59 WARNING mlflow.tensorflow: You are saving a TensorFlow Core model or Keras model without a signature. Inference with mlflow.pyfunc.spark_udf() will not work unless the model's pyfunc representation accepts pandas DataFrames as inference inputs.
+2026/11/07 02:44:59 WARNING mlflow.utils.requirements_utils: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - numpy (current: 2.4.6, required: numpy==2.2.6)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[31m2026/11/07 02:44:59 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.[0m
+🏃 View run frozen-head-manual-2 at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/0/runs/509538557bf34acab9e2b8ca72e5f73d
+🧪 View experiment at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/0
+Epoch 1/5
+E0000 00:00:1794001575.174269 34110159 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+22/22 - 1s - 45ms/step - accuracy: 0.8353 - auc: 0.9116 - loss: 0.3945 - val_accuracy: 0.7740 - val_auc: 0.8035 - val_loss: 0.5497
+Epoch 2/5
+22/22 - 1s - 42ms/step - accuracy: 0.8691 - auc: 0.9296 - loss: 0.3624 - val_accuracy: 0.7603 - val_auc: 0.8069 - val_loss: 0.5482
+Epoch 3/5
+22/22 - 0s - 20ms/step - accuracy: 0.8809 - auc: 0.9375 - loss: 0.3456 - val_accuracy: 0.7603 - val_auc: 0.8099 - val_loss: 0.5424
+Epoch 4/5
+22/22 - 1s - 24ms/step - accuracy: 0.8926 - auc: 0.9449 - loss: 0.3298 - val_accuracy: 0.7671 - val_auc: 0.8118 - val_loss: 0.5382
+Epoch 5/5
+22/22 - 1s - 24ms/step - accuracy: 0.8985 - auc: 0.9516 - loss: 0.3151 - val_accuracy: 0.7740 - val_auc: 0.8140 - val_loss: 0.5360
+/Users/muzzammilshahid/Desktop/mlops_a2/.venv-tf/lib/python3.11/site-packages/keras/src/saving/saving_lib.py:869: UserWarning: Skipping variable loading for optimizer 'adam_7', because it has 2 variables whereas the saved optimizer has 6 variables. 
+  saveable.load_own_variables(store)
+2026/11/07 02:46:19 WARNING mlflow.tensorflow: You are saving a TensorFlow Core model or Keras model without a signature. Inference with mlflow.pyfunc.spark_udf() will not work unless the model's pyfunc representation accepts pandas DataFrames as inference inputs.
+2026/11/07 02:46:19 WARNING mlflow.utils.requirements_utils: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - numpy (current: 2.4.6, required: numpy==2.2.6)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[31m2026/11/07 02:46:19 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.[0m
+🏃 View run frozen-head-manual-3 at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/0/runs/7dc125724e4a41ebbcdb7ad543b26a85
+🧪 View experiment at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/0
+Epoch 1/5
+E0000 00:00:1794001645.663496 34110159 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+22/22 - 8s - 351ms/step - accuracy: 0.7632 - auc: 0.8563 - loss: 0.4653 - val_accuracy: 0.7603 - val_auc: 0.8032 - val_loss: 0.5405
+Epoch 2/5
+22/22 - 4s - 182ms/step - accuracy: 0.7838 - auc: 0.8607 - loss: 0.4647 - val_accuracy: 0.7534 - val_auc: 0.8087 - val_loss: 0.5398
+Epoch 3/5
+22/22 - 8s - 361ms/step - accuracy: 0.7985 - auc: 0.8722 - loss: 0.4528 - val_accuracy: 0.7671 - val_auc: 0.8057 - val_loss: 0.5413
+Epoch 4/5
+22/22 - 4s - 180ms/step - accuracy: 0.8338 - auc: 0.8973 - loss: 0.4057 - val_accuracy: 0.7671 - val_auc: 0.8085 - val_loss: 0.5374
+Epoch 5/5
+22/22 - 3s - 141ms/step - accuracy: 0.7956 - auc: 0.8758 - loss: 0.4490 - val_accuracy: 0.7671 - val_auc: 0.8112 - val_loss: 0.5346
+/Users/muzzammilshahid/Desktop/mlops_a2/.venv-tf/lib/python3.11/site-packages/keras/src/saving/saving_lib.py:869: UserWarning: Skipping variable loading for optimizer 'adam_9', because it has 2 variables whereas the saved optimizer has 6 variables. 
+  saveable.load_own_variables(store)
+2026/11/07 02:47:52 WARNING mlflow.tensorflow: You are saving a TensorFlow Core model or Keras model without a signature. Inference with mlflow.pyfunc.spark_udf() will not work unless the model's pyfunc representation accepts pandas DataFrames as inference inputs.
+2026/11/07 02:47:53 WARNING mlflow.utils.requirements_utils: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - numpy (current: 2.4.6, required: numpy==2.2.6)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[31m2026/11/07 02:47:53 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.[0m
+🏃 View run frozen-head-manual-4 at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/0/runs/fcc4ccc621bd441da045342977c907a8
+🧪 View experiment at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/0
+Epoch 1/5
+E0000 00:00:1794001783.724014 34110159 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+22/22 - 1s - 52ms/step - accuracy: 0.7338 - auc: 0.8034 - loss: 0.5683 - val_accuracy: 0.7466 - val_auc: 0.8004 - val_loss: 0.5456
+Epoch 2/5
+22/22 - 7s - 297ms/step - accuracy: 0.7279 - auc: 0.8042 - loss: 0.5759 - val_accuracy: 0.7397 - val_auc: 0.7992 - val_loss: 0.5459
+Epoch 3/5
+22/22 - 1s - 23ms/step - accuracy: 0.7353 - auc: 0.8187 - loss: 0.5439 - val_accuracy: 0.7466 - val_auc: 0.8047 - val_loss: 0.5459
+Epoch 4/5
+22/22 - 8s - 341ms/step - accuracy: 0.7618 - auc: 0.8351 - loss: 0.5218 - val_accuracy: 0.7603 - val_auc: 0.8088 - val_loss: 0.5419
+Epoch 5/5
+22/22 - 0s - 20ms/step - accuracy: 0.7603 - auc: 0.8160 - loss: 0.5639 - val_accuracy: 0.7466 - val_auc: 0.8100 - val_loss: 0.5374
+/Users/muzzammilshahid/Desktop/mlops_a2/.venv-tf/lib/python3.11/site-packages/keras/src/saving/saving_lib.py:869: UserWarning: Skipping variable loading for optimizer 'adam_11', because it has 2 variables whereas the saved optimizer has 6 variables. 
+  saveable.load_own_variables(store)
+2026/11/07 02:50:00 WARNING mlflow.tensorflow: You are saving a TensorFlow Core model or Keras model without a signature. Inference with mlflow.pyfunc.spark_udf() will not work unless the model's pyfunc representation accepts pandas DataFrames as inference inputs.
+2026/11/07 02:50:00 WARNING mlflow.utils.requirements_utils: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - numpy (current: 2.4.6, required: numpy==2.2.6)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[31m2026/11/07 02:50:00 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.[0m
+🏃 View run frozen-head-manual-5 at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/0/runs/8c394a2c610944d9ab0204628bca77c8
+🧪 View experiment at: https://dagshub.com/HayyanHaider/23L-0727_A2_Ops.mlflow/#/experiments/0
+[
+  {
+    "run_id": "b9c4e10a4f064cc99c515736c4b2a937",
+    "logging": "manual",
+    "learning_rate": 0.001,
+    "dropout": 0.3,
+    "accuracy": 0.8426470756530762,
+    "auc": 0.909443199634552,
+    "loss": 0.38852691650390625,
+    "val_accuracy": 0.7602739930152893,
+    "val_auc": 0.8121557235717773,
+    "val_loss": 0.5343570709228516
+  },
+  {
+    "run_id": "5be408bdf432466eb4dce5bf65a66d74",
+    "logging": "autolog",
+    "learning_rate": 0.0001,
+    "dropout": 0.3,
+    "accuracy": 0.804411768913269,
+    "auc": 0.882270097732544,
+    "loss": 0.4375978410243988,
+    "val_accuracy": 0.7465753555297852,
+    "val_auc": 0.8055080771446228,
+    "val_loss": 0.5391229391098022
+  },
+  {
+    "run_id": "509538557bf34acab9e2b8ca72e5f73d",
+    "logging": "manual",
+    "learning_rate": 0.01,
+    "dropout": 0.3,
+    "accuracy": 0.8602941036224365,
+    "auc": 0.932697057723999,
+    "loss": 0.33231109380722046,
+    "val_accuracy": 0.732876718044281,
+    "val_auc": 0.8026590347290039,
+    "val_loss": 0.7244130373001099
+  },
+  {
+    "run_id": "7dc125724e4a41ebbcdb7ad543b26a85",
+    "logging": "manual",
+    "learning_rate": 0.001,
+    "dropout": 0.0,
+    "accuracy": 0.8985294103622437,
+    "auc": 0.9515590071678162,
+    "loss": 0.31512632966041565,
+    "val_accuracy": 0.7739726305007935,
+    "val_auc": 0.8139601349830627,
+    "val_loss": 0.5359889268875122
+  },
+  {
+    "run_id": "fcc4ccc621bd441da045342977c907a8",
+    "logging": "manual",
+    "learning_rate": 0.001,
+    "dropout": 0.5,
+    "accuracy": 0.7955882549285889,
+    "auc": 0.8757786154747009,
+    "loss": 0.4490426480770111,
+    "val_accuracy": 0.767123281955719,
+    "val_auc": 0.8112061023712158,
+    "val_loss": 0.534618616104126
+  },
+  {
+    "run_id": "8c394a2c610944d9ab0204628bca77c8",
+    "logging": "manual",
+    "learning_rate": 0.001,
+    "dropout": 0.7,
+    "accuracy": 0.7602941393852234,
+    "auc": 0.8160212635993958,
+    "loss": 0.5638524889945984,
+    "val_accuracy": 0.7465753555297852,
+    "val_auc": 0.8099715113639832,
+    "val_loss": 0.5373952388763428
+  }
+]

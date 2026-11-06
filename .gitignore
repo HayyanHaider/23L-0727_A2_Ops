@@ -28,3 +28,8 @@ submission/*.zip
 *.db
 .pytest_cache/
 .ruff_cache/
+
+# Report work and local experiment state
+mlruns/
+tmp/
+node_modules/

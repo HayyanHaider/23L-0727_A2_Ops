@@ -1,0 +1,3 @@
+NAME                    IMAGE                  COMMAND                  SERVICE   CREATED              STATUS                        PORTS
+23l-0727-a2-ops-db-1    postgres:17-bookworm   "docker-entrypoint.s…"   db        About a minute ago   Up About a minute (healthy)   5432/tcp
+23l-0727-a2-ops-web-1   visionguard:23l-0727   "gunicorn --bind 0.0…"   web       About a minute ago   Up About a minute (healthy)   127.0.0.1:8002->8000/tcp

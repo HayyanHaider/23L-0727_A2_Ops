@@ -1,0 +1,27 @@
+
+$ docker-compose stop web
+ Container 23l-0727-a2-ops-web-1 Stopping 
+ Container 23l-0727-a2-ops-web-1 Stopped 
+
+$ docker-compose start web
+ Container 23l-0727-a2-ops-db-1 Waiting 
+ Container 23l-0727-a2-ops-db-1 Healthy 
+ Container 23l-0727-a2-ops-web-1 Starting 
+ Container 23l-0727-a2-ops-web-1 Started 
+
+$ docker-compose restart web
+ Container 23l-0727-a2-ops-web-1 Restarting 
+ Container 23l-0727-a2-ops-web-1 Started 
+
+$ docker-compose exec -T web sh -c id; pwd; test -r /models/champion.keras && echo champion-readable
+uid=10001(appuser) gid=10001(appuser) groups=10001(appuser)
+/app
+champion-readable
+
+$ docker-compose exec -T db sh -c id postgres; psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT count(*) AS retained_predictions FROM predictions;"
+uid=999(postgres) gid=999(postgres) groups=999(postgres),101(ssl-cert)
+ retained_predictions 
+----------------------
+                    2
+(1 row)
+

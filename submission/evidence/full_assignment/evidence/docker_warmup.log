@@ -1,0 +1,42 @@
+23L-0727_A2_Ops | Docker warm-up | 2026-11-06T21:17:01.790798+00:00
+
+$ docker run -d --name visionguard-warmup -p 127.0.0.1:19080:8080 -v visionguard_warmup_data:/www busybox:1.37 sh -c echo VisionGuard-23L-0727 > /www/index.html; echo warmup-started; httpd -f -p 8080 -h /www
+Unable to find image 'busybox:1.37' locally
+1.37: Pulling from library/busybox
+af820adcc158: Pulling fs layer
+9eac587a9921: Download complete
+af820adcc158: Download complete
+af820adcc158: Pull complete
+Digest: sha256:a7dbc319b1438115a207e11930dc4bb3e643dcb3ec0bdd694bb36cd8fad289ec
+Status: Downloaded newer image for busybox:1.37
+3b2e6352e756a174796d45e53fb1b9914408a9d8c22224b7d175330abf217d74
+
+$ curl --retry 5 --retry-connrefused --retry-delay 1 -fsS http://127.0.0.1:19080
+VisionGuard-23L-0727
+
+$ docker logs visionguard-warmup
+warmup-started
+
+$ docker exec visionguard-warmup sh -c id; cat /www/index.html; echo persisted > /www/proof.txt
+uid=0(root) gid=0(root) groups=0(root),10(wheel)
+VisionGuard-23L-0727
+
+$ docker ps --filter name=visionguard-warmup
+CONTAINER ID   IMAGE          COMMAND                  CREATED                  STATUS        PORTS                       NAMES
+3b2e6352e756   busybox:1.37   "sh -c 'echo VisionG…"   Less than a second ago   Up 1 second   127.0.0.1:19080->8080/tcp   visionguard-warmup
+
+$ docker stop visionguard-warmup
+visionguard-warmup
+
+$ docker rm visionguard-warmup
+visionguard-warmup
+
+$ docker run --rm -v visionguard_warmup_data:/www busybox:1.37 cat /www/proof.txt
+persisted
+
+$ docker image rm busybox:1.37
+Untagged: busybox:1.37
+Deleted: sha256:a7dbc319b1438115a207e11930dc4bb3e643dcb3ec0bdd694bb36cd8fad289ec
+
+$ docker volume rm visionguard_warmup_data
+visionguard_warmup_data

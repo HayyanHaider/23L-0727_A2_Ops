@@ -1,0 +1,7 @@
+uid=10001(appuser) gid=10001(appuser) groups=10001(appuser)
+uid=0(root) gid=0(root) groups=0(root)
+                                                              version                                                               
+------------------------------------------------------------------------------------------------------------------------------------
+ PostgreSQL 17.10 (Debian 17.10-1.pgdg12+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+(1 row)
+

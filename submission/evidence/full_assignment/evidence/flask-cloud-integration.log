@@ -1,0 +1,22 @@
+[2026-11-07 03:15:55 +0500] [86070] [INFO] Starting gunicorn 23.0.0
+[2026-11-07 03:15:55 +0500] [86070] [INFO] Listening at: http://127.0.0.1:8000 (86070)
+[2026-11-07 03:15:55 +0500] [86070] [INFO] Using worker: gthread
+[2026-11-07 03:15:55 +0500] [86071] [INFO] Booting worker with pid: 86071
+127.0.0.1 - - [07/Nov/2026:03:16:04 +0500] "GET /health HTTP/1.1" 200 122 "-" "python-requests/2.34.2"
+127.0.0.1 - - [07/Nov/2026:03:16:07 +0500] "POST /predict HTTP/1.1" 200 1161 "-" "python-requests/2.34.2"
+127.0.0.1 - - [07/Nov/2026:03:16:08 +0500] "POST /predict HTTP/1.1" 200 1159 "-" "python-requests/2.34.2"
+127.0.0.1 - - [07/Nov/2026:03:16:08 +0500] "POST /predict HTTP/1.1" 400 750 "-" "python-requests/2.34.2"
+127.0.0.1 - - [07/Nov/2026:03:16:08 +0500] "POST /predict HTTP/1.1" 400 762 "-" "python-requests/2.34.2"
+127.0.0.1 - - [07/Nov/2026:03:16:08 +0500] "POST /predict HTTP/1.1" 413 774 "-" "python-requests/2.34.2"
+127.0.0.1 - - [07/Nov/2026:03:16:08 +0500] "GET /history HTTP/1.1" 200 1451 "-" "python-requests/2.34.2"
+127.0.0.1 - - [07/Nov/2026:03:16:34 +0500] "GET /health HTTP/1.1" 200 122 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"
+127.0.0.1 - - [07/Nov/2026:03:16:44 +0500] "GET / HTTP/1.1" 200 1355 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"
+127.0.0.1 - - [07/Nov/2026:03:16:44 +0500] "GET /static/style.css HTTP/1.1" 304 0 "http://127.0.0.1:8000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"
+127.0.0.1 - - [07/Nov/2026:03:17:02 +0500] "POST /predict HTTP/1.1" 200 1161 "http://127.0.0.1:8000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"
+127.0.0.1 - - [07/Nov/2026:03:17:03 +0500] "GET /static/style.css HTTP/1.1" 304 0 "http://127.0.0.1:8000/predict" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"
+127.0.0.1 - - [07/Nov/2026:03:17:22 +0500] "GET / HTTP/1.1" 200 1355 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"
+127.0.0.1 - - [07/Nov/2026:03:17:22 +0500] "GET /static/style.css HTTP/1.1" 304 0 "http://127.0.0.1:8000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"
+127.0.0.1 - - [07/Nov/2026:03:17:27 +0500] "POST /predict HTTP/1.1" 200 1159 "http://127.0.0.1:8000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"
+127.0.0.1 - - [07/Nov/2026:03:17:27 +0500] "GET /static/style.css HTTP/1.1" 304 0 "http://127.0.0.1:8000/predict" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"
+127.0.0.1 - - [07/Nov/2026:03:18:03 +0500] "GET /history HTTP/1.1" 200 1673 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"
+127.0.0.1 - - [07/Nov/2026:03:18:03 +0500] "GET /static/style.css HTTP/1.1" 304 0 "http://127.0.0.1:8000/history" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"

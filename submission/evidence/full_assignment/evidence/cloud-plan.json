@@ -1,0 +1,12 @@
+{
+  "provider": "GitHub Codespaces",
+  "account": "HayyanHaider",
+  "machine": "2-core",
+  "region": "Southeast Asia",
+  "plan": "GitHub Pro",
+  "included_core_hours": 180,
+  "included_gb_month": 20,
+  "observed_account_usage": "Billing overview showed only minimal included usage; no paid resource selected",
+  "checked": "2026-11-07",
+  "idle_behavior": "Default idle timeout; resume Codespace for later grading"
+}

@@ -1,0 +1,71 @@
+
+$ docker-compose -f compose.yaml -f outputs/full_assignment/compose-failure.yaml up -d --no-deps --force-recreate web
+ Container 23l-0727-a2-ops-web-1 Recreate 
+ Container 23l-0727-a2-ops-web-1 Recreated 
+ Container 23l-0727-a2-ops-web-1 Starting 
+ Container 23l-0727-a2-ops-web-1 Started 
+web-1  | [2026-11-06 21:43:48 +0000] [1] [INFO] Starting gunicorn 23.0.0
+web-1  | [2026-11-06 21:43:48 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+web-1  | [2026-11-06 21:43:48 +0000] [1] [INFO] Using worker: gthread
+web-1  | [2026-11-06 21:43:48 +0000] [7] [INFO] Booting worker with pid: 7
+web-1  | [2026-11-06 21:43:51 +0000] [7] [ERROR] Exception in worker process
+web-1  | Traceback (most recent call last):
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+web-1  |     worker.init_process()
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+web-1  |     super().init_process()
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/workers/base.py", line 135, in init_process
+web-1  |     self.load_wsgi()
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+web-1  |     self.wsgi = self.app.wsgi()
+web-1  |                 ^^^^^^^^^^^^^^^
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/app/base.py", line 66, in wsgi
+web-1  |     self.callable = self.load()
+web-1  |                     ^^^^^^^^^^^
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+web-1  |     return self.load_wsgiapp()
+web-1  |            ^^^^^^^^^^^^^^^^^^^
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+web-1  |     return util.import_app(self.app_uri)
+web-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+web-1  |   File "/usr/local/lib/python3.11/site-packages/gunicorn/util.py", line 370, in import_app
+web-1  |     mod = importlib.import_module(module)
+web-1  |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+web-1  |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+web-1  |     return _bootstrap._gcd_import(name[level:], package, level)
+web-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+web-1  |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+web-1  |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+web-1  |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+web-1  |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+web-1  |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+web-1  |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+web-1  |   File "/app/wsgi.py", line 6, in <module>
+web-1  |     app = create_app()
+web-1  |           ^^^^^^^^^^^^
+web-1  |   File "/app/visionguard/web.py", line 37, in create_app
+web-1  |     predictor = Predictor(app.config["MODEL_PATH"], app.config["MODEL_METADATA_PATH"],
+web-1  |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+web-1  |   File "/app/visionguard/inference.py", line 44, in __init__
+web-1  |     self.sha256 = hashlib.sha256(Path(model_path).read_bytes()).hexdigest()
+web-1  |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+web-1  |   File "/usr/local/lib/python3.11/pathlib.py", line 1050, in read_bytes
+web-1  |     with self.open(mode='rb') as f:
+web-1  |          ^^^^^^^^^^^^^^^^^^^^
+web-1  |   File "/usr/local/lib/python3.11/pathlib.py", line 1044, in open
+web-1  |     return io.open(self, mode, buffering, encoding, errors, newline)
+web-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+web-1  | FileNotFoundError: [Errno 2] No such file or directory: '/models/missing.keras'
+web-1  | [2026-11-06 21:43:51 +0000] [7] [INFO] Worker exiting (pid: 7)
+web-1  | [2026-11-06 21:43:51 +0000] [1] [ERROR] Worker (pid:7) exited with code 3
+web-1  | [2026-11-06 21:43:51 +0000] [1] [ERROR] Shutting down: Master
+web-1  | [2026-11-06 21:43:51 +0000] [1] [ERROR] Reason: Worker failed to boot.
+
+$ docker-compose up -d --no-deps --force-recreate web
+ Container 23l-0727-a2-ops-web-1 Recreate 
+ Container 23l-0727-a2-ops-web-1 Recreated 
+ Container 23l-0727-a2-ops-web-1 Starting 
+ Container 23l-0727-a2-ops-web-1 Started 
+
+Recovered /health: {"database":"ready","debug":false,"mode":"resident_model","model_version":"2","project":"23L-0727_A2_Ops","status":"ok"}
+

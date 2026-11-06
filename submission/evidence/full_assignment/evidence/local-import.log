@@ -1,0 +1,94 @@
+2026/11/07 02:23:53 INFO mlflow.tracking.fluent: Experiment with name '23L-0727_A2_Ops-original-colab' does not exist. Creating a new experiment.
+2026/11/07 02:23:55 WARNING mlflow.tensorflow: You are saving a TensorFlow Core model or Keras model without a signature. Inference with mlflow.pyfunc.spark_udf() will not work unless the model's pyfunc representation accepts pandas DataFrames as inference inputs.
+2026/11/07 02:23:55 WARNING mlflow.utils.requirements_utils: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - numpy (current: 2.4.6, required: numpy==2.2.6)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[31m2026/11/07 02:23:55 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.[0m
+Successfully registered model '23L-0727_A2_Ops'.
+2026/11/07 02:23:55 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for model version to finish creation. Model name: 23L-0727_A2_Ops, version 1
+Created version '1' of model '23L-0727_A2_Ops'.
+Registered model '23L-0727_A2_Ops' already exists. Creating a new version of this model...
+2026/11/07 02:23:55 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for model version to finish creation. Model name: 23L-0727_A2_Ops, version 2
+Created version '2' of model '23L-0727_A2_Ops'.
+🏃 View run original-colab-baseline at: http://127.0.0.1:5050/#/experiments/2/runs/6842ace716f840d3ac6a649d0c658152
+🧪 View experiment at: http://127.0.0.1:5050/#/experiments/2
+🏃 View run original-colab-head at: http://127.0.0.1:5050/#/experiments/2/runs/abb4002707bb45aea6c4a8f500a5eff2
+🧪 View experiment at: http://127.0.0.1:5050/#/experiments/2
+🏃 View run original-colab-finetune at: http://127.0.0.1:5050/#/experiments/2/runs/0078fac1545e481ab3c8a73760f6632a
+🧪 View experiment at: http://127.0.0.1:5050/#/experiments/2
+🏃 View run original-applied-trial-4 at: http://127.0.0.1:5050/#/experiments/2/runs/2c121c3fb3b8455796f9759a15aef7e3
+🧪 View experiment at: http://127.0.0.1:5050/#/experiments/2
+🏃 View run original-applied-trial-6 at: http://127.0.0.1:5050/#/experiments/2/runs/1995ba4872204779975627911ff69aab
+🧪 View experiment at: http://127.0.0.1:5050/#/experiments/2
+🏃 View run original-applied-trial-1 at: http://127.0.0.1:5050/#/experiments/2/runs/8a6df85154914cc8b59323d3f949928a
+🧪 View experiment at: http://127.0.0.1:5050/#/experiments/2
+🏃 View run original-applied-trial-2 at: http://127.0.0.1:5050/#/experiments/2/runs/c9f10d32cf9b441c88398a331001bb9c
+🧪 View experiment at: http://127.0.0.1:5050/#/experiments/2
+🏃 View run original-applied-trial-5 at: http://127.0.0.1:5050/#/experiments/2/runs/25cc3bfb6a26459eb319b3b2de1639e8
+🧪 View experiment at: http://127.0.0.1:5050/#/experiments/2
+🏃 View run original-applied-trial-3 at: http://127.0.0.1:5050/#/experiments/2/runs/34358e172d2b49eda3489df8dba90d1b
+🧪 View experiment at: http://127.0.0.1:5050/#/experiments/2
+🏃 View run original-applied-trial-0 at: http://127.0.0.1:5050/#/experiments/2/runs/a6866d26682d4d2ba5820fe08a4ff5ce
+🧪 View experiment at: http://127.0.0.1:5050/#/experiments/2
+🏃 View run original-applied-trial-7 at: http://127.0.0.1:5050/#/experiments/2/runs/ad4bc6106f2a4b8f940fbf9174fad97e
+🧪 View experiment at: http://127.0.0.1:5050/#/experiments/2
+🏃 View run locked-champion-before-test at: http://127.0.0.1:5050/#/experiments/2/runs/f4ca460c06d24cb8be2a7f99e44cc3c8
+🧪 View experiment at: http://127.0.0.1:5050/#/experiments/2
+[
+  {
+    "stage": "baseline",
+    "run_id": "6842ace716f840d3ac6a649d0c658152"
+  },
+  {
+    "stage": "head",
+    "run_id": "abb4002707bb45aea6c4a8f500a5eff2"
+  },
+  {
+    "stage": "finetune",
+    "run_id": "0078fac1545e481ab3c8a73760f6632a"
+  },
+  {
+    "trial_id": 4,
+    "run_id": "2c121c3fb3b8455796f9759a15aef7e3",
+    "val_loss": 0.4738284051418304
+  },
+  {
+    "trial_id": 6,
+    "run_id": "1995ba4872204779975627911ff69aab",
+    "val_loss": 0.4891072511672973
+  },
+  {
+    "trial_id": 1,
+    "run_id": "8a6df85154914cc8b59323d3f949928a",
+    "val_loss": 0.4962390661239624
+  },
+  {
+    "trial_id": 2,
+    "run_id": "c9f10d32cf9b441c88398a331001bb9c",
+    "val_loss": 0.5012117624282837
+  },
+  {
+    "trial_id": 5,
+    "run_id": "25cc3bfb6a26459eb319b3b2de1639e8",
+    "val_loss": 0.516767144203186
+  },
+  {
+    "trial_id": 3,
+    "run_id": "34358e172d2b49eda3489df8dba90d1b",
+    "val_loss": 0.5184946060180664
+  },
+  {
+    "trial_id": 0,
+    "run_id": "a6866d26682d4d2ba5820fe08a4ff5ce",
+    "val_loss": 0.5211918354034424
+  },
+  {
+    "trial_id": 7,
+    "run_id": "ad4bc6106f2a4b8f940fbf9174fad97e",
+    "val_loss": 0.5249460339546204
+  },
+  {
+    "champion_run_id": "f4ca460c06d24cb8be2a7f99e44cc3c8",
+    "model_version": "2"
+  }
+]
