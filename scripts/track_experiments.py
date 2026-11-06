@@ -137,6 +137,9 @@ def import_original():
                 m = json.loads((SOURCE / "evaluation/baseline/metrics.json").read_text())
                 mlflow.log_metrics({"test_" + k: v for k, v in m.items() if isinstance(v, (int, float))})
                 mlflow.log_artifacts(str(SOURCE / "evaluation/baseline"), "evaluation")
+            if stage == "head":
+                log_keras(keras.models.load_model(SOURCE / "head/best.keras", compile=False),
+                          register="23L-0727_A2_Ops")
             records.append(dict(stage=stage, run_id=run.info.run_id))
     for row in pd.read_csv(SOURCE / "tuner/trials.csv").to_dict("records"):
         with mlflow.start_run(run_name="original-applied-trial-" + str(row["trial_id"])) as run:
@@ -160,12 +163,10 @@ def import_original():
         info = log_keras(keras.models.load_model(SOURCE / "tuner/best.keras", compile=False), register="23L-0727_A2_Ops")
         from mlflow import MlflowClient
         client = MlflowClient()
-        first = info.registered_model_version
-        second = mlflow.register_model(f"runs:/{run.info.run_id}/model", "23L-0727_A2_Ops")
-        client.set_model_version_tag("23L-0727_A2_Ops", str(first), "purpose", "initial registration of locked checkpoint")
-        client.set_model_version_tag("23L-0727_A2_Ops", second.version, "purpose", "deployment promotion; same verified checkpoint")
-        client.set_registered_model_alias("23L-0727_A2_Ops", "champion", second.version)
-        records.append(dict(champion_run_id=run.info.run_id, model_version=second.version))
+        version = str(info.registered_model_version)
+        client.set_model_version_tag("23L-0727_A2_Ops", version, "purpose", "locked tuned checkpoint promoted for deployment")
+        client.set_registered_model_alias("23L-0727_A2_Ops", "champion", version)
+        records.append(dict(champion_run_id=run.info.run_id, model_version=version))
     return records
 
 
