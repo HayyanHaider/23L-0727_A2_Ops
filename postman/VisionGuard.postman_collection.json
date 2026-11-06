@@ -1,0 +1,108 @@
+{
+  "info": {
+    "name": "23L-0727_A2_Ops - VisionGuard public API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Public health from external network",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Health is ready\", () => { pm.response.to.have.status(200); pm.expect(pm.response.json().status).to.eql(\"ok\"); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Known real image",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/predict",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": "samples/known_real.png"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Prediction succeeds\", () => { pm.response.to.have.status(200); const j=pm.response.json(); pm.expect(j.model_version).to.exist; pm.expect(j.ai_score).to.be.within(0,1); pm.expect(j.request_id).to.exist; });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Known AI image",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/predict",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": "samples/known_ai.png"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Prediction succeeds\", () => { pm.response.to.have.status(200); const j=pm.response.json(); pm.expect(j.model_version).to.exist; pm.expect(j.ai_score).to.be.within(0,1); pm.expect(j.request_id).to.exist; });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reject missing API key",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/predict"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Authentication enforced\", () => pm.response.to.have.status(401));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+name: Public API verification
+on:
+  workflow_dispatch:
+    inputs:
+      api_url:
+        description: Public Codespaces model API URL
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  external-network-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify API from a separate GitHub-hosted network
+        env:
+          API_URL: ${{ inputs.api_url }}
+          INFERENCE_API_KEY: ${{ secrets.INFERENCE_API_KEY }}
+        run: |
+          npm install --no-save newman
+          node scripts/run_postman.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 23L-0727_A2_Ops-api-evidence
+          path: outputs/postman-results.json

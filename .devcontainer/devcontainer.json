@@ -2,6 +2,6 @@
   "name": "23L-0727_A2_Ops",
   "image": "mcr.microsoft.com/devcontainers/python:3.11-bookworm",
   "forwardPorts": [8001],
-  "portsAttributes": {"8001": {"label": "23L-0727_A2_Ops model API", "protocol": "https"}},
+  "portsAttributes": {"8001": {"label": "23L-0727_A2_Ops model API", "protocol": "http"}},
   "postCreateCommand": "pip install -r requirements-serve.txt"
 }
