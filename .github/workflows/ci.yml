@@ -1,0 +1,27 @@
+name: VisionGuard CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install runtime and verification dependencies
+        run: pip install -r requirements-serve.txt -r requirements-test.txt
+      - name: Lint application and tests
+        run: ruff check visionguard/web.py visionguard/inference.py visionguard/database.py tests/test_web.py wsgi.py
+      - name: Test data, validation, and persistence
+        env:
+          TF_CPP_MIN_LOG_LEVEL: '2'
+          TF_NUM_INTRAOP_THREADS: '2'
+          TF_NUM_INTEROP_THREADS: '2'
+        run: pytest -q
+      - name: Build production image
+        run: docker build -t visionguard:ci .

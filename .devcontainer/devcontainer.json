@@ -1,0 +1,8 @@
+{
+  "name": "23L-0727_A2_Ops",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11-bookworm",
+  "features": {"ghcr.io/devcontainers/features/docker-in-docker:2": {}},
+  "forwardPorts": [8001],
+  "portsAttributes": {"8001": {"label": "23L-0727_A2_Ops model API", "protocol": "https"}},
+  "postCreateCommand": "pip install -r requirements-serve.txt"
+}

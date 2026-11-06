@@ -1,0 +1,38 @@
+name: 23l-0727-a2-ops
+services:
+  db:
+    image: postgres:17-bookworm
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-visionguard}
+      POSTGRES_USER: ${POSTGRES_USER:-visionguard}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+  web:
+    build: .
+    image: visionguard:23l-0727
+    ports:
+      - "127.0.0.1:${WEB_PORT:-8000}:8000"
+    environment:
+      PROJECT_NAME: 23L-0727_A2_Ops
+      DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER:-visionguard}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-visionguard}
+      MODEL_PATH: /models/champion.keras
+      MODEL_METADATA_PATH: /models/champion.json
+      MODEL_THRESHOLD: ${MODEL_THRESHOLD:-0.6806868314743042}
+      INFERENCE_API_URL: ${INFERENCE_API_URL:-}
+      INFERENCE_API_KEY: ${INFERENCE_API_KEY:?Set INFERENCE_API_KEY in .env}
+      MAX_UPLOAD_BYTES: 5242880
+    volumes:
+      - ./models:/models:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+volumes:
+  db_data:
