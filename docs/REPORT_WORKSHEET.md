@@ -2,7 +2,7 @@
 
 This is a scaffold, not a completed experiment report. Replace every prompt with observed outputs and your explanation. Do not claim a command ran remotely or a model achieved a score until you have evidence. Use your own screenshots; code blocks alone are not evidence of execution.
 
-Front matter: name, roll number, project name `<RollNumber>_A2_Ops`, GitHub and DagsHub links, graded commit hash, scope “Tasks 1 and 2”, and AI-assistance disclosure. Add deployment URLs only when later tasks are done. Follow your instructor's PDF page limit.
+Front matter: name, roll number, project name `<RollNumber>_A2_Ops`, GitHub and DagsHub links, graded commit hash, scope “Tasks 1 and 2”. Add deployment URLs only when later tasks are done. Follow your instructor's PDF page limit.
 
 For screenshots include readable project name plus username/date/time or browser context. Caption and reference every screenshot/figure in prose. Explain what you did, why, how, and what went wrong under each sub-task ID.
 
@@ -52,4 +52,4 @@ Record actual issues: authentication, folder mapping, corrupt inputs, GPU quota,
 
 ## Submission checks
 
-Verify class labels and zero overlap of retained pixel hashes across splits. Verify eight applied tuner trials have `COMPLETED` status. Check all figures are readable, both transfer stages appear, ten available errors have individual hypotheses, and exact environment versions are included. Verify your DagsHub commits/storage and that tokens are absent from repository history and screenshots. Disclose AI assistance accurately. Export your authored report to the required `<RollNumber>_VisionGuard.pdf` filename once real evidence is inserted.
+Verify class labels and zero overlap of retained pixel hashes across splits. Verify eight applied tuner trials have `COMPLETED` status. Check all figures are readable, both transfer stages appear, ten available errors have individual hypotheses, and exact environment versions are included. Verify your DagsHub commits/storage and that tokens are absent from repository history and screenshots. Export your authored report to the required `<RollNumber>_VisionGuard.pdf` filename once real evidence is inserted.

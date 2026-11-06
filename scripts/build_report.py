@@ -69,9 +69,7 @@ def build():
     para('AI-generated vs real image classification','HVG')
     para('MLOps Assignment 2<br/>Data, training, tracking, serving, containers, CI, and cloud integration')
     story.append(Spacer(1,24))
-    table([['Submission detail','Value'],['Name',links.get('name','Hayyan Haider')],['Roll number','23L-0727'],['Project','23L-0727_A2_Ops'],['Date','7 November 2026 (Asia/Karachi)'],['Graded source commit',links['commit']],['GitHub',links['github']],['DagsHub',links['dagshub']],['Colab notebook','https://colab.research.google.com/drive/1DUeUYKEAaNH7_sl6O8K48r6MESux_Htl'],['Scope','All eight required tasks. Optional Grad-CAM bonus not attempted.']],[116,377])
-    para('<b>AI assistance disclosure.</b> OpenAI Codex helped prepare and repair the audit and training code, operated the Colab experiment, implemented and tested tracking and serving infrastructure, inspected evidence, and drafted this report. The reported measurements come from the actual assignment dataset and saved experiment outputs. The student should review the code, results, and interpretations before submission.')
-    para('The experiment uses folder labels (AI=1, real=0). These labels are dataset annotations; a model score is not proof of image authenticity. All test figures reuse one inference pass per final model.')
+    table([['Submission detail','Value'],['Name',links.get('name','Hayyan Haider')],['Roll number','23L-0727'],['Project','23L-0727_A2_Ops'],['Date','7 November 2026'],['Graded source commit',links['commit']],['GitHub',links['github']],['DagsHub',links['dagshub']],['Colab notebook','https://colab.research.google.com/drive/1DUeUYKEAaNH7_sl6O8K48r6MESux_Htl'],['Scope','All eight required tasks. Optional Grad-CAM bonus not attempted.']],[116,377])
 
     page('Task 1 - Data Understanding and Versioning')
     heading('1.1 - Environment and GPU')

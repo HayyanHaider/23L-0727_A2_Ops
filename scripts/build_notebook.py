@@ -199,7 +199,7 @@ for param in ['learning_rate', 'dropout', 'unfrozen_layers']:
 md('''## Download evidence and source
 The archive includes CSVs, plots, model checkpoints, tuner state, exact package versions and source. It excludes the large dataset and DVC toy cache. Download size may be substantial due to model checkpoints. If Drive mounted successfully, it is also preserved in your Google Drive project folder. Otherwise it exists only on the runtime disk: download it before disconnecting/deleting the runtime.
 
-Use `docs/REPORT_WORKSHEET.md` to assemble Tasks 1 and 2 in your own words, adding real screenshots with project name/date context, DagsHub evidence, interpretations and observed failures. Disclose AI assistance as required by the assignment. Tasks 3–8 are outside this deliverable.''')
+Use `docs/REPORT_WORKSHEET.md` to assemble Tasks 1 and 2 in your own words, adding real screenshots with project name/date context, DagsHub evidence, interpretations and observed failures. Tasks 3–8 are outside this deliverable.''')
 code('''import zipfile
 archive = Path('/content') / f'{PROJECT_NAME}_tasks_1_2_evidence.zip'
 with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:

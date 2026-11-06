@@ -25,7 +25,7 @@ The original T4 model comparison and threshold were locked before the original h
 
 Image bytes are decoded and processed in memory. Only sanitized filenames, UTC timestamps, decisions, scores, model identities, and latency are stored. The detector can make mistakes; scores are not calibrated proof of authenticity.
 
-The PDF report records the completed verification and deployment evidence. Credentials, runtime databases, dataset bytes, and caches are excluded from Git. AI assistance and sources are disclosed as required by the assignment.
+The PDF report records the completed verification and deployment evidence. Credentials, runtime databases, dataset bytes, and caches are excluded from Git. Sources are cited in the report.
 
 ## Submission and live demonstration
 

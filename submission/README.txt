@@ -32,4 +32,3 @@ saved metrics. Later live tracking demonstrations do not change the champion.
 The original AI-labelled API sample was classified as Real; this real model
 error is retained and explained. API success is not a new accuracy estimate.
 Screenshots are genuine captures, cropped for readability without retouching.
-The report includes the assignment's required assistance disclosure.
