@@ -23,7 +23,7 @@ styles = getSampleStyleSheet()
 styles.add(ParagraphStyle(name='BodyVG',fontName='Helvetica',fontSize=9.5,leading=13,spaceAfter=7,textColor=colors.HexColor('#26354a')))
 styles.add(ParagraphStyle(name='CaptionVG',fontSize=8,leading=10,spaceBefore=4,spaceAfter=10,textColor=colors.HexColor('#546378')))
 styles.add(ParagraphStyle(name='TitleVG',fontName='Helvetica-Bold',fontSize=30,leading=35,spaceAfter=18,textColor=colors.HexColor('#122d4d')))
-styles.add(ParagraphStyle(name='HVG',fontName='Helvetica-Bold',fontSize=17,leading=21,spaceBefore=5,spaceAfter=12,textColor=colors.HexColor('#122d4d')))
+styles.add(ParagraphStyle(name='HVG',fontName='Helvetica-Bold',fontSize=17,leading=21,spaceBefore=5,spaceAfter=12,keepWithNext=True,textColor=colors.HexColor('#122d4d')))
 styles.add(ParagraphStyle(name='SmallVG',fontName='Helvetica',fontSize=7.5,leading=10,spaceAfter=5))
 story=[]
 fig=0
@@ -216,10 +216,10 @@ def build():
     para('The source repository contains the audit, pipeline/models, tuning, threshold/evaluation code, and standalone notebook. The evidence bundle includes the exact environment, split manifests, source hashes, curves, checkpoints, tuner state, and saved predictions. The report builder reads these outputs and refuses to build without COMPLETE.json and at least eight completed applied trials.')
     table([['Observed issue','Resolution and evidence'],['PNG decoding failure','Lossless re-encoding from the audited original; 972/972 pixel hashes verified, one file repaired.'],['Slow repeated full-resolution decode','Cache resized deterministic inputs before per-epoch shuffle; augmentation remains dynamic.'],['Google Drive storage quota','Use runtime-local output storage and download evidence/checkpoints. Existing Drive content was not deleted.']],[140,353])
     para('For a new run: create a virtual environment; install requirements; audit the originals; verify labels and split hashes; run the PNG integrity repair; execute scripts.run_training with a new output directory. Use the provided unchanged settings for a pre-test resume. After test access, read saved predictions rather than repeating model selection.')
-    from scripts.full_report_sections import append_sections
-    append_sections(globals())
     for label,url in [('Assignment dataset','https://www.kaggle.com/datasets/cashbowman/ai-generated-images-vs-real-images'),('TensorFlow transfer learning','https://www.tensorflow.org/guide/keras/transfer_learning'),('Keras Tuner getting started','https://keras.io/keras_tuner/getting_started/'),('DVC remote storage','https://dvc.org/doc/user-guide/data-management/remote-storage')]:
         para(f'<b>{label}:</b> <link href="{url}" color="#1c5c91">{url}</link>','SmallVG')
+    from scripts.full_report_sections import append_sections
+    append_sections(globals())
     OUT.parent.mkdir(exist_ok=True)
     doc=SimpleDocTemplate(str(OUT),pagesize=(595.276,841.89),rightMargin=51,leftMargin=51,topMargin=47,bottomMargin=56,title='VisionGuard - Tasks 1-8 - 23L-0727',author=links.get('name','Hayyan Haider'))
     doc.build(story,onFirstPage=footer,onLaterPages=footer)

@@ -27,5 +27,8 @@
     "Codespaces is on demand and can sleep",
     "Optional Grad-CAM not attempted",
     "AI-labelled demonstration sample is a real classification error"
-  ]
+  ],
+  "graded_source_commit": "214e6b7393212f03f1cbe61fe40c511cffd81d00",
+  "graded_source_ci": "https://github.com/HayyanHaider/23L-0727_A2_Ops/actions/runs/42304342558",
+  "graded_source_ci_status": "success"
 }
